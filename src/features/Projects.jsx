@@ -1,9 +1,14 @@
 import React from "react";
-import Nav from "../components/Nav";
-const ProjectsPage = () => {
+import Lamp from "../components/Lamp";
+const Projects = () => {
   return (
-    <div className="page">
-      <Nav active="projects" />
+    <div>
+      <Lamp />
+      <div className="nav">
+        <span className="item">
+          <b>Back</b>
+        </span>
+      </div>
       <div className="projects">
         <p>Projects</p>
         <hr />
@@ -15,4 +20,4 @@ const ProjectsPage = () => {
   );
 };
 
-export default ProjectsPage;
+export default Projects;

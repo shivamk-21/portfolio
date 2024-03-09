@@ -1,13 +1,11 @@
 import React from "react";
-import Lamp from "../components/Lamp";
 // import cube from "../assets/cube.png";
 import github from "../assets/github.png";
 import gmail from "../assets/gmail.png";
 import linkedin from "../assets/linkedin.png";
 const HomePage = () => {
   return (
-    <div>
-      <Lamp />
+    <div className="page">
       <div className="mainData">
         <div>Shivam Kushwaha</div>
         <hr />
