@@ -1,13 +1,12 @@
 import React from "react";
+import edu from "../assets/Edu.svg"
 const EducationPage = () => {
   return (
     <div>
       <div className="projects">
-        <p>Projects</p>
+        <p>Education</p>
         <hr />
-        <div>Ai & ML Projects</div>
-        <div>Web Dev Projects</div>
-        <div>React Native Projects</div>
+        <img src={edu} alt="Education" className="edu" />
       </div>
     </div>
   );

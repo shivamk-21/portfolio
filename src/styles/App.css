@@ -283,3 +283,9 @@
   height: 100%;
   width: 100%;
 }
+.edu{
+  position: absolute;
+  width:75vw;
+  top:30vh;
+  left:3vw;
+}
