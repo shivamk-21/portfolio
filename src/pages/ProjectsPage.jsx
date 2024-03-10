@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import Projects from "../features/ProjectsDetials/Projects";
+
 const ProjectsPage = ({ modal, modalChange }) => {
   const [category, setCategory] = useState("ai");
   const openProject = (name) => {
-    modalChange(true);
-    setCategory(name);
+    window.location.href = `#projects`;
+    setTimeout(() => {
+      modalChange(true);
+      setCategory(name);
+    }, 100);
   };
 
   return (
