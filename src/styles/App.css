@@ -240,7 +240,7 @@
   width: 80vw;
   height: 35vw;
   /* background-color: red; */
-  top: 5vw;
+  top: 10vh;
   left: 10vw;
 }
 .projects > p {
@@ -252,7 +252,7 @@
   width: 35vw;
   margin-top: -3vw;
 }
-.projects > div {
+.projects > .neo {
   height: 14vw;
   width: 20vw;
   border-radius: 2rem;
@@ -288,4 +288,29 @@
   width:75vw;
   top:30vh;
   left:3vw;
+}
+.expBoard{
+  position: absolute;
+  width:85vw;
+  height: 68vh;
+  top:25vh;
+  left:-2vw;
+  border: #000000 0.2vw solid;
+  border-radius: 2rem;
+}
+.head {
+  position: absolute;
+  width: 80vw;
+  height: 35vw;
+  top: 2vw;
+  left: 10vw;
+}
+.head > hr {
+  width: 25vw;
+  margin-top: -4vw;
+}
+.head > p {
+  font-size: 4.5vw;
+  font-family: "Bruno Ace";
+  text-align: center;
 }

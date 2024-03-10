@@ -2,12 +2,9 @@ import React from "react";
 const SkillsPage = () => {
   return (
     <div>
-      <div className="projects">
-        <p>Projects</p>
+      <div className="head">
+        <p>Skills</p>
         <hr />
-        <div>Ai & ML Projects</div>
-        <div>Web Dev Projects</div>
-        <div>React Native Projects</div>
       </div>
     </div>
   );

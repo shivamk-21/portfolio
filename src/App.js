@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Element, scroller } from "react-scroll";
+import { Element } from "react-scroll";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import SkillsPage from "./pages/SkillsPage";

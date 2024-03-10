@@ -5,9 +5,9 @@ const ProjectsPage = () => {
       <div className="projects">
         <p>Projects</p>
         <hr />
-        <div>Ai & ML Projects</div>
-        <div>Web Dev Projects</div>
-        <div>React Native Projects</div>
+        <div className="neo">Ai & ML Projects</div>
+        <div className="neo">Web Dev Projects</div>
+        <div className="neo">React Native Projects</div>
       </div>
     </div>
   );
