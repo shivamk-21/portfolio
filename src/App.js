@@ -5,6 +5,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import SkillsPage from "./pages/SkillsPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import EducationPage from "./pages/EducationPage";
+import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import Lamp from "./components/Lamp";
 import "./styles/App.css";
@@ -64,6 +65,7 @@ function App() {
       <Element className="page" id="skills">
         <SkillsPage />
       </Element>
+      <Footer />
     </div>
   );
 }
