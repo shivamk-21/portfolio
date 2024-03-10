@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link, Element, animateScroll as scroll, scroller } from "react-scroll";
+import { Element, scroller } from "react-scroll";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
+import SkillsPage from "./pages/SkillsPage";
+import ExperiencePage from "./pages/ExperiencePage";
+import EducationPage from "./pages/EducationPage";
 import Projects from "./features/ProjectsDetials/Projects";
 import Nav from "./components/Nav";
 import Lamp from "./components/Lamp";
@@ -12,17 +15,24 @@ function App() {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    const homePageOffset = document.getElementById("home").offsetTop;
-    const projectsPageOffset = document.getElementById("projects").offsetTop;
 
-    if (
-      scrollPosition >= homePageOffset &&
-      scrollPosition < projectsPageOffset
-    ) {
-      setCurrentPage("home");
-    } else if (scrollPosition >= projectsPageOffset) {
-      setCurrentPage("projects");
-    }
+    const pageOffsets = {
+      home: document.getElementById("home").offsetTop,
+      projects: document.getElementById("projects").offsetTop,
+      edu: document.getElementById("edu").offsetTop,
+      exp: document.getElementById("exp").offsetTop,
+      skills: document.getElementById("skills").offsetTop,
+    };
+
+    let currentPage = "home";
+
+    Object.entries(pageOffsets).forEach(([page, offset]) => {
+      if (scrollPosition >= offset) {
+        currentPage = page;
+      }
+    });
+
+    setCurrentPage(currentPage);
   };
 
   useEffect(() => {
@@ -31,14 +41,6 @@ function App() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const scrollToElement = (element) => {
-    scroller.scrollTo(element, {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-    });
-  };
 
   return (
     <div className="App">
@@ -49,6 +51,15 @@ function App() {
       </Element>
       <Element className="page" id="projects">
         <ProjectsPage />
+      </Element>
+      <Element className="page" id="edu">
+        <EducationPage />
+      </Element>
+      <Element className="page" id="exp">
+        <ExperiencePage />
+      </Element>
+      <Element className="page" id="skills">
+        <SkillsPage />
       </Element>
       <Projects />
     </div>

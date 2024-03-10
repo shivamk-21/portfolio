@@ -1,23 +1,43 @@
 import React from "react";
+import { Link } from "react-scroll";
+
 const Nav = ({ active }) => {
   return (
     <div>
       <div className="nav">
-        <a className="item" href="#home">
+        <Link
+          className="item"
+          to="home"
+          spy={true}
+          smooth={true}
+          duration={800}
+        >
           {active === "home" ? <b>Home</b> : "Home"}
-        </a>
-        <a className="item" href="#projects">
+        </Link>
+        <Link
+          className="item"
+          to="projects"
+          spy={true}
+          smooth={true}
+          duration={800}
+        >
           {active === "projects" ? <b>Projects</b> : "Projects"}
-        </a>
-        <a className="item" href="#edu">
-          {active === "education" ? <b>Education</b> : "Education"}
-        </a>
-        <a className="item" href="#exp">
-          {active === "experience" ? <b>Experience</b> : "Experience"}
-        </a>
-        <a className="item" href="#skills">
-          {active === "skills" ? <b>Education</b> : "Skills"}
-        </a>
+        </Link>
+        <Link className="item" to="edu" spy={true} smooth={true} duration={800}>
+          {active === "edu" ? <b>Education</b> : "Education"}
+        </Link>
+        <Link className="item" to="exp" spy={true} smooth={true} duration={800}>
+          {active === "exp" ? <b>Experience</b> : "Experience"}
+        </Link>
+        <Link
+          className="item"
+          to="skills"
+          spy={true}
+          smooth={true}
+          duration={800}
+        >
+          {active === "skills" ? <b>Skills</b> : "Skills"}
+        </Link>
       </div>
     </div>
   );

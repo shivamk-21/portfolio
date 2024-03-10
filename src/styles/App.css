@@ -227,7 +227,7 @@
 .nav > .item:hover {
   font-size: 2.3vw;
 }
-.item{
+.item {
   text-decoration: none;
 }
 .item > b {
@@ -280,6 +280,6 @@
 }
 .page {
   position: relative;
-  height: 120%;
+  height: 100%;
   width: 100%;
 }

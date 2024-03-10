@@ -5,7 +5,7 @@ import gmail from "../assets/gmail.png";
 import linkedin from "../assets/linkedin.png";
 const HomePage = () => {
   return (
-    <div className="page">
+    <div>
       <div className="mainData">
         <div>Shivam Kushwaha</div>
         <hr />

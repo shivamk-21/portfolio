@@ -1,5 +1,5 @@
 import React from "react";
-const ProjectsPage = () => {
+const EducationPage = () => {
   return (
     <div>
       <div className="projects">
@@ -13,4 +13,4 @@ const ProjectsPage = () => {
   );
 };
 
-export default ProjectsPage;
+export default EducationPage;
