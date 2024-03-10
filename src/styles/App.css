@@ -303,7 +303,7 @@
   position: absolute;
   width: 80vw;
   height: 35vw;
-  top: 2vw;
+  top: 1.7vw;
   left: 10vw;
 }
 .head > hr {
@@ -358,4 +358,39 @@
   position: absolute;
   right: 3vw;
   border-radius: 2rem;
+}
+.hexagonal-neomorphic-div {
+  position: relative;
+  width: 11vw;
+  height: 12vw;
+  margin-top: -3vw;
+  background-image: url("../assets/skills/hexa.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hexagonal-neomorphic-div > img {
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vw;
+  margin-left: -0.4vw;
+  margin-top: -0.4vw;
+}
+.row {
+  position: absolute;
+  width: 80vw;
+  height: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.second {
+  top: 20vw;
+}
+.third {
+  top: 30vw;
 }
