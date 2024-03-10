@@ -289,16 +289,6 @@
   top: 30vh;
   left: 3vw;
 }
-.expBoard {
-  position: absolute;
-  width: 82vw;
-  height: 68vh;
-  top: 25vh;
-  left: -2vw;
-  border: #000000 0.2vw solid;
-  border-radius: 2rem;
-  padding-left: 3vw;
-}
 .head {
   position: absolute;
   width: 80vw;
@@ -343,6 +333,17 @@
 .expBoard > h1 {
   font-size: 3vw;
   font-family: "Bruno Ace";
+}
+.expBoard {
+  position: absolute;
+  width: 82vw;
+  height: 68vh;
+  top: 25vh;
+  left: -2vw;
+  border: #000000 0.2vw solid;
+  border-radius: 2rem;
+  overflow: hidden;
+  padding-left: 2vw;
 }
 .expBoard > h3 {
   font-size: 1.5vw;
@@ -424,4 +425,92 @@
   border-radius: 2rem;
   padding: 1%;
   cursor: pointer;
+}
+.expContainer {
+  display: flex;
+  width: fit-content;
+  height: 100%;
+}
+.expCard {
+  position: relative;
+  width: 25vw;
+  height: 30vw;
+  top: 2vh;
+}
+.pane {
+  position: absolute;
+  width: 25vw;
+  height: 23.5vw;
+  z-index: 3;
+}
+.desc {
+  position: absolute;
+  width: 20vw;
+  height: 10vh;
+  bottom: 0;
+  background-color: rgba(244, 249, 0, 0.29);
+  font-size: 1.2vw;
+  font-family: "Bruno Ace";
+  padding: 0.1vw;
+  left: 2vw;
+  border-radius: 1rem;
+  border: #000000 0.2vw solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tshirt {
+  position: absolute;
+  width: 20vw;
+  height: 23.5vw;
+  z-index: 4;
+  top: -1vw;
+  left: 3vw;
+}
+.scrollButton-right {
+  position: absolute;
+  width: 6.5vw;
+  height: 5vw;
+  right: -5.5vw;
+  z-index: 5;
+  cursor: pointer;
+  top: 24vw;
+}
+.scrollButton-left {
+  position: absolute;
+  width: 6.5vw;
+  height: 5vw;
+  top: 25vw;
+  left: -5vw;
+  z-index: 5;
+  cursor: pointer;
+}
+.scrollText {
+  background-color: white;
+  border-radius: 20rem;
+  border: #000000 0.2vw solid;
+  font-size: 3.5vw;
+  padding: 1vw;
+  font-family: "Bruno Ace";
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.divider {
+  width: 50vw;
+  height: 10vw;
+  rotate: 90deg;
+  margin-left: -20vw;
+  margin-right: -20vw;
+  margin-top: 3vw;
+  opacity: 70%;
+}
+.dividerText {
+  rotate: -90deg;
+  margin-left: -26vw;
+  margin-right: -24vw;
+  font-size: 1.8vw;
+  font-family: "Bruno Ace";
+  width: 50vw;
+  height: 10vw;
 }
