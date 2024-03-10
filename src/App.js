@@ -5,14 +5,16 @@ import ProjectsPage from "./pages/ProjectsPage";
 import SkillsPage from "./pages/SkillsPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import EducationPage from "./pages/EducationPage";
-import Projects from "./features/ProjectsDetials/Projects";
 import Nav from "./components/Nav";
 import Lamp from "./components/Lamp";
 import "./styles/App.css";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
-
+  const [modal, setModal] = useState(false);
+  const handleModalChange = (state) => {
+    setModal(state);
+  };
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
 
@@ -33,6 +35,7 @@ function App() {
     });
 
     setCurrentPage(currentPage);
+    setModal(false);
   };
 
   useEffect(() => {
@@ -50,7 +53,7 @@ function App() {
         <HomePage />
       </Element>
       <Element className="page" id="projects">
-        <ProjectsPage />
+        <ProjectsPage modal={modal} modalChange={handleModalChange} />
       </Element>
       <Element className="page" id="edu">
         <EducationPage />
@@ -61,7 +64,6 @@ function App() {
       <Element className="page" id="skills">
         <SkillsPage />
       </Element>
-      <Projects />
     </div>
   );
 }

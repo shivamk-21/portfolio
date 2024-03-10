@@ -1,15 +1,35 @@
-import React from "react";
-const ProjectsPage = () => {
+import React, { useState } from "react";
+import Projects from "../features/ProjectsDetials/Projects";
+const ProjectsPage = ({ modal, modalChange }) => {
+  const [category, setCategory] = useState("ai");
+  const openProject = (name) => {
+    modalChange(true);
+    setCategory(name);
+  };
+
   return (
-    <div>
-      <div className="projects">
-        <p>Projects</p>
-        <hr />
-        <div className="neo">Ai & ML Projects</div>
-        <div className="neo">Web Dev Projects</div>
-        <div className="neo">React Native Projects</div>
-      </div>
-    </div>
+    <>
+      {modal && (
+        <Projects category={category} close={() => modalChange(false)} />
+      )}
+      {!modal && (
+        <div>
+          <div className="projects">
+            <p>Projects</p>
+            <hr />
+            <div className="neo" onClick={() => openProject("ai")}>
+              Ai & ML Projects
+            </div>
+            <div className="neo" onClick={() => openProject("web")}>
+              Web Dev Projects
+            </div>
+            <div className="neo" onClick={() => openProject("rn")}>
+              React Native Projects
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

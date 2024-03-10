@@ -175,7 +175,7 @@
   z-index: 0;
 }
 .gmail:hover {
-  filter: drop-shadow(0vw 2vw 2vw rgba(253, 49, 76, 0.7));
+  filter: drop-shadow(0vw 2vw 5vw rgba(253, 49, 76, 0.7));
 }
 .gmail-logo {
   position: absolute;
@@ -191,7 +191,7 @@
   z-index: 1;
 }
 .github:hover {
-  filter: drop-shadow(0vw 2vw 2vw rgba(102, 102, 102, 0.7));
+  filter: drop-shadow(0vw 2vw 5vw rgba(0, 0, 0, 0.7));
 }
 .linkedin {
   position: absolute;
@@ -201,7 +201,7 @@
   z-index: 2;
 }
 .linkedin:hover {
-  filter: drop-shadow(0vw 2vw 2vw rgba(143, 159, 252, 0.7));
+  filter: drop-shadow(0vw 2vw 5vw rgba(143, 159, 252, 0.7));
 }
 .nav {
   position: fixed;
@@ -239,7 +239,6 @@
   position: absolute;
   width: 80vw;
   height: 35vw;
-  /* background-color: red; */
   top: 10vh;
   left: 10vw;
 }
@@ -256,8 +255,8 @@
   height: 14vw;
   width: 20vw;
   border-radius: 2rem;
-  box-shadow: -0.3vw -0.3vw 3vw rgba(255, 255, 255, 0.45),
-    0.5vw 0.5vw 2vw rgba(94, 104, 121, 0.3);
+  box-shadow: -0.3vw -0.3vw 3vw rgba(255, 255, 255, 0.6),
+    0.5vw 0.5vw 2vw rgba(138, 143, 153, 0.575);
   margin-top: 4vw;
   float: left;
   margin-right: 3vw;
@@ -267,6 +266,7 @@
   font-size: 3vw;
   padding-top: 6vw;
   text-shadow: 2vw -2vw 2vw white;
+  cursor: pointer;
 }
 .NavBar {
   position: absolute;
@@ -283,20 +283,21 @@
   height: 100%;
   width: 100%;
 }
-.edu{
+.edu {
   position: absolute;
-  width:75vw;
-  top:30vh;
-  left:3vw;
+  width: 75vw;
+  top: 30vh;
+  left: 3vw;
 }
-.expBoard{
+.expBoard {
   position: absolute;
-  width:85vw;
+  width: 82vw;
   height: 68vh;
-  top:25vh;
-  left:-2vw;
+  top: 25vh;
+  left: -2vw;
   border: #000000 0.2vw solid;
   border-radius: 2rem;
+  padding-left: 3vw;
 }
 .head {
   position: absolute;
@@ -313,4 +314,48 @@
   font-size: 4.5vw;
   font-family: "Bruno Ace";
   text-align: center;
+}
+.projects-buttons {
+  position: absolute;
+  width: 10vw;
+  height: 12vh;
+  top: 6.5vw;
+  font-size: 4.5vw;
+  font-family: "Bruno Ace";
+  background-color: #ffffff;
+  border-radius: 5rem;
+  border: #000000 2px solid;
+  cursor: pointer;
+  z-index: 2;
+  text-align: center;
+}
+.projects-next {
+  right: 20vw;
+}
+.projects-prev {
+  left: 20vw;
+}
+.projects-close {
+  right: 6vw;
+  border: #e6aaaa 2px solid;
+  color: #fc9696;
+}
+.expBoard > h1 {
+  font-size: 3vw;
+  font-family: "Bruno Ace";
+}
+.expBoard > h3 {
+  font-size: 1.5vw;
+  font-family: "Bruno Ace";
+  color: #93969f;
+  width: 45vw;
+  text-align: justify;
+}
+.expBoard > img {
+  width: 30vw;
+  height: 30vw;
+  top: 1vw;
+  position: absolute;
+  right: 3vw;
+  border-radius: 2rem;
 }
