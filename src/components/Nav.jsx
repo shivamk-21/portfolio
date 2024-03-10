@@ -3,19 +3,21 @@ const Nav = ({ active }) => {
   return (
     <div>
       <div className="nav">
-        <span className="item">{active === "home" ? <b>Home</b> : "Home"}</span>
-        <span className="item">
+        <a className="item" href="#home">
+          {active === "home" ? <b>Home</b> : "Home"}
+        </a>
+        <a className="item" href="#projects">
           {active === "projects" ? <b>Projects</b> : "Projects"}
-        </span>
-        <span className="item">
+        </a>
+        <a className="item" href="#edu">
           {active === "education" ? <b>Education</b> : "Education"}
-        </span>
-        <span className="item">
+        </a>
+        <a className="item" href="#exp">
           {active === "experience" ? <b>Experience</b> : "Experience"}
-        </span>
-        <span className="item">
+        </a>
+        <a className="item" href="#skills">
           {active === "skills" ? <b>Education</b> : "Skills"}
-        </span>
+        </a>
       </div>
     </div>
   );

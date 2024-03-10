@@ -1,9 +1,7 @@
 import React from "react";
-import Nav from "../components/Nav";
 const ProjectsPage = () => {
   return (
     <div className="page">
-      <Nav active="projects" />
       <div className="projects">
         <p>Projects</p>
         <hr />
