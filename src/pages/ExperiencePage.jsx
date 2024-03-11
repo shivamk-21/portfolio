@@ -25,12 +25,12 @@ const ExperiencePage = () => {
         <p>Experience</p>
         <div
           className="scrollButton-left"
-          onClick={() => handleScroll(-400)}
+          onClick={() => handleScroll(-330)}
           hidden={scrollLeft <= 0}
         >
           <div className="scrollText">&#x21d0;</div>
         </div>
-        <div className="scrollButton-right" onClick={() => handleScroll(400)}>
+        <div className="scrollButton-right" onClick={() => handleScroll(330)}>
           <div className="scrollText"> &#x21d2;</div>
         </div>
         <div className="expBoard" ref={expContainerRef}>

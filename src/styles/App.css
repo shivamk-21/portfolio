@@ -514,3 +514,257 @@
   width: 50vw;
   height: 10vw;
 }
+.edu_mob {
+  display: none;
+}
+.row_mob {
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .App {
+    height: 100%;
+  }
+  .themeChange {
+    display: none;
+  }
+  .mainData {
+    height: 120vw;
+    width: 60vw;
+    left: 8vw;
+    top: 15vw;
+  }
+  .mainData > div {
+    font-size: 12vw;
+    text-align: center;
+    width: 70vw;
+  }
+  .mainData > hr {
+    width: 60vw;
+    margin-left: 5vw;
+    height: 0.5vw;
+  }
+  .mainData > h2 {
+    font-size: 5vw;
+    text-align: center;
+    width: 70vw;
+  }
+  .mainData > p {
+    margin-top: 5.5vw;
+    font-size: 4.5vw;
+    text-align: justify;
+    width: 70vw;
+  }
+  .gmail {
+    height: 37vw;
+    left: 12vw;
+    top: 120vw;
+  }
+  .github {
+    height: 37vw;
+    right: 10vw;
+    top: 120vw;
+  }
+  .linkedin {
+    height: 37vw;
+    right: 35vw;
+    top: 120vw;
+  }
+  .projects {
+    top: 10vh;
+  }
+  .projects > p {
+    font-size: 7vw;
+  }
+  .projects > hr {
+    width: 55vw;
+  }
+  .projects > .neo {
+    height: 24vw;
+    width: 37vw;
+    margin-left: 21vw;
+    font-size: 6vw;
+    padding-top: 10vw;
+  }
+  .head {
+    top: 10vw;
+  }
+  .head > hr {
+    width: 35vw;
+    top: 30vw;
+    position: inherit;
+    left: 24.5vw;
+  }
+  .head > p {
+    font-size: 8vw;
+    top: 6vw;
+    position: inherit;
+    width: 85vw;
+    text-align: center;
+  }
+  .projects-buttons {
+    width: 12vw;
+    height: 12vw;
+    top: 85vw;
+    font-size: 7vw;
+  }
+  .projects-next {
+    right: 2vw;
+  }
+  .projects-prev {
+    left: 2vw;
+  }
+  .projects-close {
+    right: 9vw;
+    top: 23vw;
+  }
+  .expBoard > h1 {
+    font-size: 5.5vw;
+    top: 50vw;
+    position: absolute;
+    width: 78.5vw;
+    text-align: center;
+  }
+  .expBoard {
+    position: absolute;
+    width: 78.5vw;
+    height: 84vh;
+    top: 7vh;
+    border: #000000 1vw solid;
+  }
+  .expBoard > h3 {
+    font-size: 3vw;
+    width: 64vw;
+    position: relative;
+    top: 60vw;
+    padding-left: 6vw;
+    color: rgb(121, 119, 119);
+  }
+  .expBoard > img {
+    width: 35vw;
+    height: 35vw;
+    top: 16vw;
+    position: absolute;
+    left: 24vw;
+    border-radius: 2rem;
+  }
+  .contact {
+    font-size: 4.5vw;
+    padding-left: 5%;
+  }
+  .top {
+    height: 3%;
+    font-size: 4.5vw;
+    right: 1vw;
+    border: #ffffff 0.7vw solid;
+    border-radius: 2rem;
+    padding: 1.2%;
+  }
+  .expContainer {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    padding-left: 4vw;
+  }
+  .expCard {
+    width: 70vw;
+    height: 100vw;
+    top: 12vh;
+  }
+  .pane {
+    width: 70vw;
+    height: 75vw;
+  }
+  .desc {
+    width: 65vw;
+    height: 10vh;
+    font-size: 4.3vw;
+    border: #000000 0.5vw solid;
+    top: 78vw;
+  }
+  .tshirt {
+    width: 70vw;
+    height: 65vw;
+    left: 1vw;
+  }
+  .scrollButton-right {
+    width: 35vw;
+    height: 5vw;
+    right: 3vw;
+    top: 128vw;
+  }
+  .scrollButton-left {
+    width: 35vw;
+    height: 5vw;
+    left: 3vw;
+    top: 128vw;
+  }
+  .scrollText {
+    border: #000000 0.6vw solid;
+    font-size: 7vw;
+  }
+  .divider {
+    width: 85vw;
+    height: 120vw;
+    rotate: 90deg;
+    margin-left: -12.5vw;
+    margin-right: -12.5vw;
+  }
+  .dividerText {
+    rotate: -90deg;
+    margin-left: -30vw;
+    margin-right: -70vw;
+    font-size: 5vw;
+    font-family: "Bruno Ace";
+    width: 100vw;
+    height: 105vw;
+  }
+  .edu {
+    display: none;
+  }
+  .edu_mob {
+    position: absolute;
+    width: 52vw;
+    top: 12vh;
+    left: 10vw;
+    z-index: -1;
+    display: block;
+  }
+  .row {
+    display: none;
+  }
+
+  .hexagonal-neomorphic-div {
+    width: 25vw;
+    height: 29vw;
+    margin-top: -5vw;
+  }
+  .hexagonal-neomorphic-div > img {
+    width: 15vw;
+    height: 15vw;
+    margin-left: 1vw;
+    margin-top: -0.4vw;
+  }
+  .row_mob {
+    position: absolute;
+    width: 80vw;
+    height: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .first {
+    top: 30vw;
+  }
+  .second {
+    top: 51.5vw;
+  }
+  .third {
+    top: 73vw;
+  }
+  .fourth {
+    top: 95vw;
+  }
+  .fifth {
+    top: 117vw;
+  }
+}

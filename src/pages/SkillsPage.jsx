@@ -64,6 +64,56 @@ const SkillsPage = () => {
             <img src={figma} alt="figma" />
           </div>
         </div>
+
+        <div className="row_mob first">
+          <div className="hexagonal-neomorphic-div">
+            <img src={python} alt="python" />
+          </div>
+          <div className="hexagonal-neomorphic-div">
+            <img src={tf} alt="tf" />
+          </div>
+          <div className="hexagonal-neomorphic-div">
+            <img src={pytorch} alt="pytorch" />
+          </div>
+        </div>
+        <div className="row_mob second">
+          <div className="hexagonal-neomorphic-div">
+            <img src={git} alt="git" />
+          </div>
+          <div className="hexagonal-neomorphic-div">
+            <img src={django} alt="django" />
+          </div>
+        </div>
+        <div className="row_mob third">
+          <div className="hexagonal-neomorphic-div">
+            <img src={javascript} alt="javascript" />
+          </div>
+          <div className="hexagonal-neomorphic-div">
+            <img src={react} alt="react" />
+          </div>
+          <div className="hexagonal-neomorphic-div">
+            <img src={node} alt="node" />
+          </div>
+        </div>
+        <div className="row_mob fourth">
+          <div className="hexagonal-neomorphic-div">
+            <img src={mongodb} alt="mongodb" />
+          </div>
+          <div className="hexagonal-neomorphic-div">
+            <img src={ps} alt="ps" />
+          </div>
+        </div>
+        <div className="row_mob fifth">
+          <div className="hexagonal-neomorphic-div">
+            <img src={ai} alt="ai" />
+          </div>
+          <div className="hexagonal-neomorphic-div">
+            <img src={xd} alt="xd" />
+          </div>
+          <div className="hexagonal-neomorphic-div">
+            <img src={figma} alt="figma" />
+          </div>
+        </div>
       </div>
     </div>
   );
