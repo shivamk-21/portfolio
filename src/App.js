@@ -30,7 +30,7 @@ function App() {
     let currentPage = "home";
 
     Object.entries(pageOffsets).forEach(([page, offset]) => {
-      if (scrollPosition >= offset) {
+      if (scrollPosition >= offset - 200) {
         currentPage = page;
       }
     });

@@ -521,11 +521,20 @@
 .row_mob {
   display: none;
 }
+.mob_nav {
+  display: none;
+}
+.web_nav {
+  display: block;
+}
 @media only screen and (max-width: 767px) {
   .App {
     height: 100%;
   }
-  .themeChange {
+  .lamp {
+    display: none;
+  }
+  .bulb {
     display: none;
   }
   .mainData {
@@ -771,5 +780,60 @@
   }
   .Footer {
     margin-top: -13vw;
+  }
+  .mob_nav {
+    display: block;
+  }
+  .web_nav {
+    display: none;
+  }
+  .nav {
+    width: 100vw;
+    height: 15vw;
+    left: 0vw;
+  }
+  .nav > .item {
+    font-size: 10vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 85vw;
+    padding-top: 2vw;
+  }
+  .nav > .item:hover {
+    font-size: 10vw;
+  }
+  .item {
+    text-decoration: none;
+  }
+  .item > b {
+    border: none;
+  }
+  .dropDown {
+    color: white;
+    position: absolute;
+    font-family: "Bruno Ace";
+    font-size: 10vw;
+    right: 10vw;
+    border-radius: 2rem;
+    border: 1vw solid white;
+    width: 12vw;
+    height: 9vw;
+    text-align: center;
+    top: 2.5vw;
+    line-height: 9vw;
+  }
+  .glowBar {
+    width: 100vw;
+    height: 10vw;
+    left: 0vw;
+    position: absolute;
+    box-shadow: 0px 35px 10px #fdfb71;
+  }
+  .rope {
+    position: absolute;
+    height: 50%;
+    top: 0%;
+    left: 93vw;
   }
 }
