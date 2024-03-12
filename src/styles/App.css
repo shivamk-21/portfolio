@@ -571,7 +571,7 @@
   }
   .github {
     height: 37vw;
-    right: 33vw;
+    right: 35vw;
     top: 140vw;
     z-index: 1;
   }
@@ -824,10 +824,10 @@
     line-height: 9vw;
   }
   .glowBar {
+    position: fixed;
     width: 100vw;
     height: 10vw;
     left: 0vw;
-    position: absolute;
     box-shadow: 0px 35px 10px #fdfb71;
   }
   .rope {
@@ -835,5 +835,37 @@
     height: 50%;
     top: 0%;
     left: 93vw;
+  }
+  .hamburger {
+    position: absolute;
+    width: 100vw;
+    height: 80vw;
+    left: 0vw;
+    background-color: black;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+  .hamburger > .item {
+    font-size: 10vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100vw;
+    padding-top: 2vw;
+    color: white;
+    font-family: "Gluten";
+    font-size: 10vw;
+    margin: 0.5vw;
+    cursor: pointer;
+  }
+  .hamburger > .item:hover {
+    font-size: 10vw;
+  }
+  .hamburger > hr {
+    width: 60vw;
+    margin-left: 20vw;
+    height: 0.2vw;
+    border-radius: 2rem;
+    background-color: #ffffff;
   }
 }
