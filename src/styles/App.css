@@ -338,12 +338,13 @@
   position: absolute;
   width: 82vw;
   height: 68vh;
-  top: 25vh;
+  top: 27vh;
   left: -2vw;
   border: #000000 0.2vw solid;
   border-radius: 2rem;
   overflow: hidden;
   padding-left: 2vw;
+  left: 9vw;
 }
 .expBoard > h3 {
   font-size: 1.5vw;
@@ -471,7 +472,7 @@
   position: absolute;
   width: 6.5vw;
   height: 5vw;
-  right: -5.5vw;
+  right: 2.5vw;
   z-index: 5;
   cursor: pointer;
   top: 24vw;
@@ -481,7 +482,7 @@
   width: 6.5vw;
   height: 5vw;
   top: 25vw;
-  left: -5vw;
+  left: 5.5vw;
   z-index: 5;
   cursor: pointer;
 }
@@ -528,10 +529,10 @@
     display: none;
   }
   .mainData {
-    height: 120vw;
+    height: 130vw;
     width: 60vw;
     left: 8vw;
-    top: 15vw;
+    top: 20vw;
   }
   .mainData > div {
     font-size: 12vw;
@@ -544,46 +545,47 @@
     height: 0.5vw;
   }
   .mainData > h2 {
-    font-size: 5vw;
+    font-size: 6vw;
     text-align: center;
     width: 70vw;
   }
   .mainData > p {
-    margin-top: 5.5vw;
-    font-size: 4.5vw;
+    margin-top: 6vw;
+    font-size: 5vw;
     text-align: justify;
     width: 70vw;
   }
   .gmail {
     height: 37vw;
-    left: 12vw;
-    top: 120vw;
+    left: 10vw;
+    top: 140vw;
   }
   .github {
     height: 37vw;
-    right: 10vw;
-    top: 120vw;
+    right: 33vw;
+    top: 140vw;
+    z-index: 1;
   }
   .linkedin {
     height: 37vw;
-    right: 35vw;
-    top: 120vw;
+    right: 8vw;
+    top: 140vw;
   }
   .projects {
     top: 10vh;
   }
   .projects > p {
-    font-size: 7vw;
+    font-size: 9vw;
   }
   .projects > hr {
-    width: 55vw;
+    width: 60vw;
   }
   .projects > .neo {
-    height: 24vw;
-    width: 37vw;
-    margin-left: 21vw;
-    font-size: 6vw;
-    padding-top: 10vw;
+    height: 26vw;
+    width: 41vw;
+    margin-left: 19vw;
+    font-size: 6.7vw;
+    padding-top: 12vw;
   }
   .head {
     top: 10vw;
@@ -595,16 +597,16 @@
     left: 24.5vw;
   }
   .head > p {
-    font-size: 8vw;
+    font-size: 9vw;
     top: 6vw;
     position: inherit;
-    width: 85vw;
+    width: 80vw;
     text-align: center;
   }
   .projects-buttons {
     width: 12vw;
     height: 12vw;
-    top: 85vw;
+    top: 90vw;
     font-size: 7vw;
   }
   .projects-next {
@@ -614,35 +616,35 @@
     left: 2vw;
   }
   .projects-close {
-    right: 9vw;
-    top: 23vw;
+    left: 11vw;
+    top: 25vw;
   }
   .expBoard > h1 {
     font-size: 5.5vw;
-    top: 50vw;
+    top: 53vw;
     position: absolute;
-    width: 78.5vw;
+    width: 78vw;
     text-align: center;
   }
   .expBoard {
     position: absolute;
-    width: 78.5vw;
-    height: 84vh;
-    top: 7vh;
+    width: 78vw;
+    height: 80vh;
+    top: 10vh;
     border: #000000 1vw solid;
   }
   .expBoard > h3 {
-    font-size: 3vw;
+    font-size: 3.2vw;
     width: 64vw;
     position: relative;
-    top: 60vw;
+    top: 63vw;
     padding-left: 6vw;
     color: rgb(121, 119, 119);
   }
   .expBoard > img {
     width: 35vw;
     height: 35vw;
-    top: 16vw;
+    top: 18vw;
     position: absolute;
     left: 24vw;
     border-radius: 2rem;
@@ -668,18 +670,18 @@
   .expCard {
     width: 70vw;
     height: 100vw;
-    top: 12vh;
+    top: 10vh;
   }
   .pane {
     width: 70vw;
-    height: 75vw;
+    height: 85vw;
   }
   .desc {
     width: 65vw;
     height: 10vh;
     font-size: 4.3vw;
     border: #000000 0.5vw solid;
-    top: 78vw;
+    top: 89vw;
   }
   .tshirt {
     width: 70vw;
@@ -689,14 +691,14 @@
   .scrollButton-right {
     width: 35vw;
     height: 5vw;
-    right: 3vw;
-    top: 128vw;
+    right: 12vw;
+    top: 83vh;
   }
   .scrollButton-left {
     width: 35vw;
     height: 5vw;
-    left: 3vw;
-    top: 128vw;
+    left: 12vw;
+    top: 83vh;
   }
   .scrollText {
     border: #000000 0.6vw solid;
@@ -723,9 +725,9 @@
   }
   .edu_mob {
     position: absolute;
-    width: 52vw;
-    top: 12vh;
-    left: 10vw;
+    width: 60vw;
+    top: 13vh;
+    left: 7vw;
     z-index: -1;
     display: block;
   }
@@ -766,5 +768,8 @@
   }
   .fifth {
     top: 117vw;
+  }
+  .Footer {
+    margin-top: -13vw;
   }
 }

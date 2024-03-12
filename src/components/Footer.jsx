@@ -10,10 +10,10 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        ✉️Contact Us
+        ✉️Contact Me
       </a>
       <Link to="home" spy={true} smooth={true} duration={800} className="top">
-        Back to Top 🡑
+        Back to Top &#x1F851;
       </Link>
     </div>
   );

@@ -23,27 +23,27 @@ const ExperiencePage = () => {
     <div>
       <div className="head">
         <p>Experience</p>
-        <div
-          className="scrollButton-left"
-          onClick={() => handleScroll(-330)}
-          hidden={scrollLeft <= 0}
-        >
-          <div className="scrollText">&#x21d0;</div>
-        </div>
-        <div className="scrollButton-right" onClick={() => handleScroll(330)}>
-          <div className="scrollText"> &#x21d2;</div>
-        </div>
-        <div className="expBoard" ref={expContainerRef}>
-          <div className="expContainer">
-            {exp.workex.map((exp) => (
-              <ExperienceCard key={exp.id} item={exp} />
-            ))}
-            <img src={divider} className="divider" alt="divider" />
-            <div className="dividerText">Co-Curricular Experience</div>
-            {exp.cocurr.map((exp) => (
-              <ExperienceCard key={exp.id} item={exp} />
-            ))}
-          </div>
+      </div>
+      <div
+        className="scrollButton-left"
+        onClick={() => handleScroll(-330)}
+        hidden={scrollLeft <= 0}
+      >
+        <div className="scrollText">&#x21d0;</div>
+      </div>
+      <div className="scrollButton-right" onClick={() => handleScroll(330)}>
+        <div className="scrollText"> &#x21d2;</div>
+      </div>
+      <div className="expBoard" ref={expContainerRef}>
+        <div className="expContainer">
+          {exp.workex.map((exp) => (
+            <ExperienceCard key={exp.id} item={exp} />
+          ))}
+          <img src={divider} className="divider" alt="divider" />
+          <div className="dividerText">Co-Curricular Experience</div>
+          {exp.cocurr.map((exp) => (
+            <ExperienceCard key={exp.id} item={exp} />
+          ))}
         </div>
       </div>
     </div>
