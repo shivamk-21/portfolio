@@ -399,9 +399,10 @@
 .Footer {
   width: 100%;
   background-color: black;
-  height: 7%;
+  height: 6.4%;
   align-items: center;
   display: flex;
+  margin-top: -2.9vw;
 }
 .contact {
   position: absolute;
@@ -780,6 +781,7 @@
   }
   .Footer {
     margin-top: -13vw;
+    height: 7%;
   }
   .mob_nav {
     display: block;
@@ -858,14 +860,16 @@
     margin: 0.5vw;
     cursor: pointer;
   }
-  .hamburger > .item:hover {
-    font-size: 10vw;
-  }
   .hamburger > hr {
     width: 60vw;
     margin-left: 20vw;
     height: 0.2vw;
     border-radius: 2rem;
     background-color: #ffffff;
+  }
+  .hamburger > .item > b {
+    border: 3.5px solid #ffffff;
+    padding: 2%;
+    padding-bottom: 2px;
   }
 }
