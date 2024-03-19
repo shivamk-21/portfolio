@@ -8,7 +8,7 @@ import EducationPage from "./pages/EducationPage";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import Lamp from "./components/Lamp";
-import "./styles/App.css";
+import "./styles/Dark.css";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");

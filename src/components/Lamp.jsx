@@ -2,7 +2,6 @@ import React from "react";
 import Lamp from "../assets/Lamp.png";
 import Rope from "../assets/rope.png";
 import Bulb from "../assets/bulb.svg";
-import "../styles/App.css";
 const LampComp = () => {
   return (
     <div className="themeChange">

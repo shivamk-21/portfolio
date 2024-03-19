@@ -25,12 +25,10 @@
   height: 50%;
   top: 35%;
   left: 20%;
+  filter: hue-rotate(185deg) brightness(100);
 }
 .glow {
-  -webkit-animation: flickerAnimation 2s infinite;
-  -moz-animation: flickerAnimation 2s infinite;
-  -o-animation: flickerAnimation 2s infinite;
-  animation: flickerAnimation 2s infinite;
+  filter: hue-rotate(185deg) brightness(100);
 }
 @keyframes flickerAnimation {
   0% {
@@ -137,7 +135,7 @@
   }
 }
 .mainData {
-  border: 3px solid black;
+  border: 3px solid rgb(255, 255, 255);
   position: absolute;
   height: 25vw;
   width: 50vw;
@@ -150,22 +148,25 @@
 .mainData > div {
   font-family: "Cherry Bomb";
   font-size: 4.5vw;
+  color: white;
 }
 .mainData > hr {
   width: 40vw;
   margin-left: 0vw;
   height: 0.2vw;
   border-radius: 2rem;
-  background-color: #93969f;
+  background-color: #ffffff;
 }
 .mainData > h2 {
   font-family: "Bruno Ace";
   font-size: 1.5vw;
+  color: white;
 }
 .mainData > p {
   margin-top: 5vw;
   font-family: "Baumans";
   font-size: 1.5vw;
+  color: white;
 }
 .gmail {
   position: absolute;
@@ -207,7 +208,7 @@
   position: fixed;
   width: 48vw;
   height: 3.5vw;
-  background-color: black;
+  background-color: #3e3e3e;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
   right: 0vw;
@@ -246,6 +247,7 @@
   font-size: 4.5vw;
   font-family: "Bruno Ace";
   text-align: center;
+  color: white;
 }
 .projects > hr {
   width: 35vw;
@@ -265,14 +267,14 @@
   font-family: "Cherry Bomb";
   font-size: 3vw;
   padding-top: 6vw;
-  text-shadow: 2vw -2vw 2vw white;
   cursor: pointer;
+  color: white;
 }
 .NavBar {
   position: absolute;
   width: 100%;
   height: 5vw;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
   padding-top: 1.5vw;
@@ -282,8 +284,14 @@
   position: relative;
   height: 100%;
   width: 100%;
+  background-color: black;
 }
-.edu {
+.edu,
+.edu_mob,
+.edu_mobDark {
+  display: none;
+}
+.eduDark {
   position: absolute;
   width: 75vw;
   top: 30vh;
@@ -304,6 +312,7 @@
   font-size: 4.5vw;
   font-family: "Bruno Ace";
   text-align: center;
+  color: white;
 }
 .projects-buttons {
   position: absolute;
@@ -312,12 +321,13 @@
   top: 6.5vw;
   font-size: 4.5vw;
   font-family: "Bruno Ace";
-  background-color: #ffffff;
+  background-color: #000000;
   border-radius: 5rem;
-  border: #000000 2px solid;
+  border: #ffffff 2px solid;
   cursor: pointer;
   z-index: 2;
   text-align: center;
+  color: white;
 }
 .projects-next {
   right: 20vw;
@@ -333,6 +343,7 @@
 .expBoard > h1 {
   font-size: 3vw;
   font-family: "Bruno Ace";
+  color: white;
 }
 .expBoard {
   position: absolute;
@@ -340,7 +351,7 @@
   height: 68vh;
   top: 27vh;
   left: -2vw;
-  border: #000000 0.2vw solid;
+  border: #ffffff 0.2vw solid;
   border-radius: 2rem;
   overflow: hidden;
   padding-left: 2vw;
@@ -349,7 +360,7 @@
 .expBoard > h3 {
   font-size: 1.5vw;
   font-family: "Bruno Ace";
-  color: #93969f;
+  color: #b1b2b4;
   width: 45vw;
   text-align: justify;
 }
@@ -450,16 +461,16 @@
   width: 20vw;
   height: 10vh;
   bottom: 0;
-  background-color: rgba(244, 249, 0, 0.29);
   font-size: 1.2vw;
   font-family: "Bruno Ace";
   padding: 0.1vw;
   left: 2vw;
   border-radius: 1rem;
-  border: #000000 0.2vw solid;
+  border: #00f0ff 0.2vw solid;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 .tshirt {
   position: absolute;
@@ -488,15 +499,16 @@
   cursor: pointer;
 }
 .scrollText {
-  background-color: white;
+  background-color: black;
   border-radius: 20rem;
-  border: #000000 0.2vw solid;
+  border: #ffffff 0.2vw solid;
   font-size: 3.5vw;
   padding: 1vw;
   font-family: "Bruno Ace";
   align-items: center;
   justify-content: center;
   display: flex;
+  color: white;
 }
 .divider {
   width: 50vw;
@@ -506,6 +518,7 @@
   margin-right: -20vw;
   margin-top: 3vw;
   opacity: 70%;
+  filter: invert(100%);
 }
 .dividerText {
   rotate: -90deg;
@@ -515,11 +528,7 @@
   font-family: "Bruno Ace";
   width: 50vw;
   height: 10vw;
-}
-.eduDark,
-.edu_mobDark,
-.edu_mob {
-  display: none;
+  color: white;
 }
 .row_mob {
   display: none;
@@ -643,7 +652,7 @@
     width: 78vw;
     height: 80vh;
     top: 10vh;
-    border: #000000 1vw solid;
+    border: #ffffff 1vw solid;
   }
   .expBoard > h3 {
     font-size: 3.2vw;
@@ -651,7 +660,7 @@
     position: relative;
     top: 63vw;
     padding-left: 6vw;
-    color: rgb(121, 119, 119);
+    color: rgb(206, 206, 206);
   }
   .expBoard > img {
     width: 35vw;
@@ -692,7 +701,7 @@
     width: 65vw;
     height: 10vh;
     font-size: 4.3vw;
-    border: #000000 0.5vw solid;
+    border: #00f0ff 0.5vw solid;
     top: 89vw;
   }
   .tshirt {
@@ -713,7 +722,7 @@
     top: 83vh;
   }
   .scrollText {
-    border: #000000 0.6vw solid;
+    border: #ffffff 0.6vw solid;
     font-size: 7vw;
   }
   .divider {
@@ -732,17 +741,16 @@
     width: 100vw;
     height: 105vw;
   }
+  .edu,
   .eduDark,
-  .edu_mobDark,
-  .edu {
+  .edu_mob {
     display: none;
   }
-  .edu_mob {
+  .edu_mobDark {
     position: absolute;
     width: 60vw;
-    top: 13vh;
+    top: 15vh;
     left: 7vw;
-    z-index: -1;
     display: block;
   }
   .row {
@@ -847,7 +855,7 @@
     width: 100vw;
     height: 80vw;
     left: 0vw;
-    background-color: black;
+    background-color: #3e3e3e;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
   }
