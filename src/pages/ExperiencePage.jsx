@@ -2,8 +2,10 @@ import React, { useState, useRef } from "react";
 import { exp } from "../data/experience";
 import { ExperienceCard } from "../features/experience/ExperienceCard";
 import divider from "../assets/tshirts/divider.svg";
+import { useConText } from "../context/Theme";
 
 const ExperiencePage = () => {
+  const { themes } = useConText();
   const expContainerRef = useRef(null);
   const [scrollLeft, setScrollLeft] = useState(0);
 
@@ -21,26 +23,29 @@ const ExperiencePage = () => {
 
   return (
     <div>
-      <div className="head">
+      <div className={`${themes} head`}>
         <p>Experience</p>
       </div>
       <div
-        className="scrollButton-left"
+        className={`${themes} scrollButton-left`}
         onClick={() => handleScroll(-330)}
         hidden={scrollLeft <= 0}
       >
-        <div className="scrollText">&#x21d0;</div>
+        <div className={`${themes} scrollText`}>&#x21d0;</div>
       </div>
-      <div className="scrollButton-right" onClick={() => handleScroll(330)}>
-        <div className="scrollText"> &#x21d2;</div>
+      <div
+        className={`${themes} scrollButton-right`}
+        onClick={() => handleScroll(330)}
+      >
+        <div className={`${themes} scrollText`}> &#x21d2;</div>
       </div>
-      <div className="expBoard" ref={expContainerRef}>
-        <div className="expContainer">
+      <div className={`${themes} expBoard`} ref={expContainerRef}>
+        <div className={`${themes} expContainer`}>
           {exp.workex.map((exp) => (
             <ExperienceCard key={exp.id} item={exp} />
           ))}
-          <img src={divider} className="divider" alt="divider" />
-          <div className="dividerText">Co-Curricular Experience</div>
+          <img src={divider} className={`${themes} divider`} alt="divider" />
+          <div className={`${themes} dividerText`}>Co-Curricular Experience</div>
           {exp.cocurr.map((exp) => (
             <ExperienceCard key={exp.id} item={exp} />
           ))}

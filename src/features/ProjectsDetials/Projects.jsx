@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Projectcard } from "./Projectcard";
 import { projectDetails } from "../../data/projects";
+import { useConText } from "../../context/Theme";
 
 const Projects = ({ category, close }) => {
+  const { themes } = useConText();
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   // Check if the category exists in projectDetails
@@ -31,18 +33,21 @@ const Projects = ({ category, close }) => {
       <button
         onClick={handlePrev}
         disabled={selectedIndex === 0}
-        className="projects-buttons projects-prev"
+        className={`${themes} projects-buttons projects-prev`}
       >
         &lt;
       </button>
       <button
         onClick={handleNext}
         disabled={selectedIndex === totalProjects - 1}
-        className="projects-buttons projects-next"
+        className={`${themes} projects-buttons projects-next`}
       >
         &gt;
       </button>
-      <button onClick={close} className="projects-buttons projects-close">
+      <button
+        onClick={close}
+        className={`${themes} projects-buttons projects-close`}
+      >
         X
       </button>
       {projectsInCategory.map((project, index) => (

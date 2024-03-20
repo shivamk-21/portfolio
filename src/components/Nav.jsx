@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
+import { useConText } from "../context/Theme";
 
 const Nav = ({ active }) => {
+  const { themes } = useConText();
   const [showhamburger, setShowHamburger] = useState(false);
   const handleHamburger = () => {
     setShowHamburger(!showhamburger);
   };
   return (
     <>
-      <div className="web_nav">
-        <div className="nav">
+      <div className={`${themes} web_nav`}>
+        <div className={`${themes} nav`}>
           <Link
-            className="item"
+            className={`${themes} item`}
             to="home"
             spy={true}
             smooth={true}
@@ -20,7 +22,7 @@ const Nav = ({ active }) => {
             {active === "home" ? <b>Home</b> : "Home"}
           </Link>
           <Link
-            className="item"
+            className={`${themes} item`}
             to="projects"
             spy={true}
             smooth={true}
@@ -29,7 +31,7 @@ const Nav = ({ active }) => {
             {active === "projects" ? <b>Projects</b> : "Projects"}
           </Link>
           <Link
-            className="item"
+            className={`${themes} item`}
             to="edu"
             spy={true}
             smooth={true}
@@ -38,7 +40,7 @@ const Nav = ({ active }) => {
             {active === "edu" ? <b>Education</b> : "Education"}
           </Link>
           <Link
-            className="item"
+            className={`${themes} item`}
             to="exp"
             spy={true}
             smooth={true}
@@ -47,7 +49,7 @@ const Nav = ({ active }) => {
             {active === "exp" ? <b>Experience</b> : "Experience"}
           </Link>
           <Link
-            className="item"
+            className={`${themes} item`}
             to="skills"
             spy={true}
             smooth={true}
@@ -57,14 +59,14 @@ const Nav = ({ active }) => {
           </Link>
         </div>
       </div>
-      <div className="mob_nav">
-        <div className="glowBar glow" />
-        <div className="nav">
-          <div className="dropDown" onClick={handleHamburger}>
+      <div className={`${themes} mob_nav`}>
+        <div className={`${themes} glowBar glow`} />
+        <div className={`${themes} nav`}>
+          <div className={`${themes} dropDown`} onClick={handleHamburger}>
             &equiv;
           </div>
           {!showhamburger && (
-            <div className="item">
+            <div className={`${themes} item`}>
               {active === "home" ? (
                 <b>Home</b>
               ) : active === "projects" ? (
@@ -81,10 +83,10 @@ const Nav = ({ active }) => {
             </div>
           )}
           {showhamburger && (
-            <div className="hamburger">
+            <div className={`${themes} hamburger`}>
               <Link
                 onClick={() => setShowHamburger(false)}
-                className="item"
+                className={`${themes} item`}
                 to="home"
                 spy={true}
                 smooth={true}
@@ -95,7 +97,7 @@ const Nav = ({ active }) => {
               <hr />
               <Link
                 onClick={() => setShowHamburger(false)}
-                className="item"
+                className={`${themes} item`}
                 to="projects"
                 spy={true}
                 smooth={true}
@@ -106,7 +108,7 @@ const Nav = ({ active }) => {
               <hr />
               <Link
                 onClick={() => setShowHamburger(false)}
-                className="item"
+                className={`${themes} item`}
                 to="edu"
                 spy={true}
                 smooth={true}
@@ -117,7 +119,7 @@ const Nav = ({ active }) => {
               <hr />
               <Link
                 onClick={() => setShowHamburger(false)}
-                className="item"
+                className={`${themes} item`}
                 to="exp"
                 spy={true}
                 smooth={true}
@@ -128,7 +130,7 @@ const Nav = ({ active }) => {
               <hr />
               <Link
                 onClick={() => setShowHamburger(false)}
-                className="item"
+                className={`${themes} item`}
                 to="skills"
                 spy={true}
                 smooth={true}

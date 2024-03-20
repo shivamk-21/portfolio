@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Projects from "../features/ProjectsDetials/Projects";
+import { useConText } from "../context/Theme";
 
 const ProjectsPage = ({ modal, modalChange }) => {
+  const { themes } = useConText();
   const [category, setCategory] = useState("ai");
   const openProject = (name) => {
     window.location.href = `#projects`;
@@ -18,16 +20,16 @@ const ProjectsPage = ({ modal, modalChange }) => {
       )}
       {!modal && (
         <div>
-          <div className="projects">
+          <div className={`${themes} projects`}>
             <p>Projects</p>
             <hr />
-            <div className="neo" onClick={() => openProject("ai")}>
+            <div className={`${themes} neo`} onClick={() => openProject("ai")}>
               Ai & ML Projects
             </div>
-            <div className="neo" onClick={() => openProject("web")}>
+            <div className={`${themes} neo`} onClick={() => openProject("web")}>
               Web Dev Projects
             </div>
-            <div className="neo" onClick={() => openProject("rn")}>
+            <div className={`${themes} neo`} onClick={() => openProject("rn")}>
               React Native Projects
             </div>
           </div>

@@ -8,14 +8,15 @@ import EducationPage from "./pages/EducationPage";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import Lamp from "./components/Lamp";
-import "./styles/Dark.css";
-
+import "./styles/App.css";
+import { useConText } from "./context/Theme";
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
   const [modal, setModal] = useState(false);
   const handleModalChange = (state) => {
     setModal(state);
   };
+  const { themes, toggleTheme } = useConText();
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
 
@@ -47,22 +48,22 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Lamp />
+    <div className={`${themes} App`}>
+      <Lamp toggle={toggleTheme} />
       <Nav active={currentPage} />
-      <Element className="page" id="home">
+      <Element className={`${themes} page`} id="home">
         <HomePage />
       </Element>
-      <Element className="page" id="projects">
+      <Element className={`${themes} page`} id="projects">
         <ProjectsPage modal={modal} modalChange={handleModalChange} />
       </Element>
-      <Element className="page" id="edu">
+      <Element className={`${themes} page`} id="edu">
         <EducationPage />
       </Element>
-      <Element className="page" id="exp">
+      <Element className={`${themes} page`} id="exp">
         <ExperiencePage />
       </Element>
-      <Element className="page" id="skills">
+      <Element className={`${themes} page`} id="skills">
         <SkillsPage />
       </Element>
       <Footer />
