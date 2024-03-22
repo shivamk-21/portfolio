@@ -7,11 +7,10 @@ export const ExperienceCard = ({ item }) => {
   return (
     <div className={`${themes} expCard`}>
       <img src={item.image} className={`${themes} tshirt`} alt={item.id} />
-      <img src={pane} className={`${themes} pane`} alt="glass-pane"/>
+      <img src={pane} className={`${themes} pane`} alt="glass-pane" />
       <div className={`${themes} desc`}>
-        {item.title}
-        <br />
-        {item.time}
+        <div>{item.title}</div>
+        <div>{item.time}</div>
       </div>
     </div>
   );

@@ -451,15 +451,18 @@
   height: 10vh;
   bottom: 0;
   background-color: rgba(244, 249, 0, 0.29);
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   font-family: "Bruno Ace";
-  padding: 0.1vw;
   left: 2vw;
   border-radius: 1rem;
   border: #000000 0.2vw solid;
+}
+.desc > div {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 50%;
 }
 .tshirt {
   position: absolute;
@@ -1150,7 +1153,7 @@
     cursor: pointer;
     color: white;
 
-  text-shadow: none;
+    text-shadow: none;
   }
   .NavBar {
     position: absolute;
@@ -1344,17 +1347,20 @@
     width: 20vw;
     height: 10vh;
     bottom: 0;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     font-family: "Bruno Ace";
-    padding: 0.1vw;
     left: 2vw;
     border-radius: 1rem;
     border: #00f0ff 0.2vw solid;
+    color: white;
+    background-color: black;
+  }
+  .desc > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    background-color: black;
+    width: 100%;
+    height: 50%;
   }
   .tshirt {
     position: absolute;
@@ -1640,7 +1646,7 @@
     .row {
       display: none;
     }
-  
+
     .hexagonal-neomorphic-div {
       width: 25vw;
       height: 29vw;
@@ -1769,5 +1775,4 @@
       padding-bottom: 2px;
     }
   }
-  
 }

@@ -36,6 +36,7 @@ const ExperiencePage = () => {
       <div
         className={`${themes} scrollButton-right`}
         onClick={() => handleScroll(330)}
+        hidden={scrollLeft >= 2000}
       >
         <div className={`${themes} scrollText`}> &#x21d2;</div>
       </div>
