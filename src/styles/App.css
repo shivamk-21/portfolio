@@ -694,7 +694,7 @@
   .desc {
     width: 65vw;
     height: 10vh;
-    font-size: 4.3vw;
+    font-size: 3.7vw;
     border: #000000 0.5vw solid;
     top: 89vw;
   }
@@ -1590,7 +1590,7 @@
     .desc {
       width: 65vw;
       height: 10vh;
-      font-size: 4.3vw;
+      font-size: 3.7vw;
       border: #00f0ff 0.5vw solid;
       top: 89vw;
     }
