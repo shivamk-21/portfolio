@@ -18,7 +18,7 @@ export const exp = {
       id: 2,
       title: "Samsung PRISM Intern",
       image: prism,
-      time: "Aug 2023 - Present",
+      time: "Aug 2023 - Apr 2023",
     },
   ],
   cocurr: [
