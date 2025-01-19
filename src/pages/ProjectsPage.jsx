@@ -1,41 +1,40 @@
-import React, { useState } from "react";
-import Projects from "../features/ProjectsDetials/Projects";
-import { useConText } from "../context/Theme";
+import React from "react";
+import { projectDetails } from "../data/projects";
 
-const ProjectsPage = ({ modal, modalChange }) => {
-  const { themes } = useConText();
-  const [category, setCategory] = useState("ai");
-  const openProject = (name) => {
-    window.location.href = `#projects`;
-    setTimeout(() => {
-      modalChange(true);
-      setCategory(name);
-    }, 100);
-  };
+const ProjectsPage = () => {
+  const createCard = (project, designType) => (
+    <div className={`project-card ${designType}`} key={project.id}>
+      <img src={project.image} alt={project.title} />
+      <h3>{project.title}</h3>
+      <p>{project.description}</p>
+      <a href={project.link} target="_blank" rel="noopener noreferrer">
+        Learn More
+      </a>
+    </div>
+  );
+
+  // Group the cards in sets of two and alternate designs
+  const cardGroups = [];
+  for (let i = 0; i < projectDetails.length; i += 2) {
+    const group = [];
+    group.push(createCard(projectDetails[i], i % 2 === 0 ? "" : "design2"));
+    if (i + 1 < projectDetails.length) {
+      group.push(
+        createCard(projectDetails[i + 1], (i + 1) % 2 === 0 ? "" : "design2")
+      );
+    }
+    cardGroups.push(group);
+  }
 
   return (
-    <>
-      {modal && (
-        <Projects category={category} close={() => modalChange(false)} />
-      )}
-      {!modal && (
-        <div>
-          <div className={`${themes} projects`}>
-            <p>Projects</p>
-            <hr />
-            <div className={`${themes} neo`} onClick={() => openProject("ai")}>
-              Ai & ML Projects
-            </div>
-            <div className={`${themes} neo`} onClick={() => openProject("web")}>
-              Web Dev Projects
-            </div>
-            <div className={`${themes} neo`} onClick={() => openProject("rn")}>
-              React Native Projects
-            </div>
-          </div>
+    <div className="projects">
+      <div className="irregular-rectangle" />
+      {cardGroups.map((group, index) => (
+        <div className="card-group" key={index}>
+          {group}
         </div>
-      )}
-    </>
+      ))}
+    </div>
   );
 };
 

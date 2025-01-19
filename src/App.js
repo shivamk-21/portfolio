@@ -8,14 +8,13 @@ import EducationPage from "./pages/EducationPage";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import "./styles/App.css";
-import { useConText } from "./context/Theme";
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
+  const [navBackColours, setNavBackColours] = useState("transparent");
   const [modal, setModal] = useState(false);
   const handleModalChange = (state) => {
     setModal(state);
   };
-  const { themes, toggleTheme } = useConText();
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
 
@@ -35,6 +34,18 @@ function App() {
       }
     });
 
+    if (currentPage === "home") {
+      setNavBackColours("rgba(0,0,0,0)");
+    } else if (currentPage === "projects") {
+      setNavBackColours("rgba(2, 21, 52, 1)");
+    } else if (
+      currentPage === "edu" ||
+      currentPage === "exp" ||
+      currentPage === "skills"
+    ) {
+      setNavBackColours("#f1f1f1");
+    }
+
     setCurrentPage(currentPage);
     setModal(false);
   };
@@ -47,21 +58,21 @@ function App() {
   }, []);
 
   return (
-    <div className={`${themes} App`}>
-      <Nav active={currentPage} />
-      <Element className={`${themes} page`} id="home">
+    <div className="App">
+      <Nav active={currentPage} navBackColours={navBackColours} />
+      <Element className="page" id="home">
         <HomePage />
       </Element>
-      <Element className={`${themes} page`} id="projects">
+      <Element className="page" id="projects">
         <ProjectsPage modal={modal} modalChange={handleModalChange} />
       </Element>
-      <Element className={`${themes} page`} id="edu">
+      <Element className="page" id="edu">
         <EducationPage />
       </Element>
-      <Element className={`${themes} page`} id="exp">
+      <Element className="page" id="exp">
         <ExperiencePage />
       </Element>
-      <Element className={`${themes} page`} id="skills">
+      <Element className="page" id="skills">
         <SkillsPage />
       </Element>
       <Footer />

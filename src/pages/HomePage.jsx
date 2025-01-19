@@ -1,12 +1,11 @@
 import React from "react";
-// import cube from "../assets/cube.png";
 import github from "../assets/logos/github.png";
 import gmail from "../assets/logos/gmail.png";
 import linkedin from "../assets/logos/linkedin.png";
 const HomePage = () => {
   return (
     <div>
-      <div className='mainData'>
+      <div className="mainData">
         <div className="firstname">Shivam</div>
         <div className="secondname">Kushwaha</div>
         <div className="box">
@@ -42,7 +41,7 @@ const HomePage = () => {
         </a>
       </div>
       <div className="stars">
-      <span></span>
+        <span></span>
         <span></span>
         <span></span>
         <span></span>
