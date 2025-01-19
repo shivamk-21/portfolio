@@ -4,10 +4,10 @@ import { useConText } from "../context/Theme";
 
 const Nav = ({ active }) => {
   const { themes } = useConText();
-  const [showhamburger, setShowHamburger] = useState(false);
-  const handleHamburger = () => {
-    setShowHamburger(!showhamburger);
-  };
+  // const [showhamburger, setShowHamburger] = useState(false);
+  // const handleHamburger = () => {
+  //   setShowHamburger(!showhamburger);
+  // };
   return (
     <>
       <div className={`${themes} web_nav`}>
@@ -59,7 +59,7 @@ const Nav = ({ active }) => {
           </Link>
         </div>
       </div>
-      <div className={`${themes} mob_nav`}>
+      {/* <div className={`${themes} mob_nav`}>
         <div className={`${themes} glowBar glow`} />
         <div className={`${themes} nav`}>
           <div className={`${themes} dropDown`} onClick={handleHamburger}>
@@ -141,7 +141,7 @@ const Nav = ({ active }) => {
             </div>
           )}
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

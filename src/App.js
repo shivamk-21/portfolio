@@ -7,7 +7,6 @@ import ExperiencePage from "./pages/ExperiencePage";
 import EducationPage from "./pages/EducationPage";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
-import Lamp from "./components/Lamp";
 import "./styles/App.css";
 import { useConText } from "./context/Theme";
 function App() {
@@ -49,7 +48,6 @@ function App() {
 
   return (
     <div className={`${themes} App`}>
-      <Lamp toggle={toggleTheme} />
       <Nav active={currentPage} />
       <Element className={`${themes} page`} id="home">
         <HomePage />
