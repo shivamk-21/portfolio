@@ -35,6 +35,8 @@ const ExperiencePage = () => {
           {group}
         </div>
       ))}
+      
+      <div className="irregular-rectangle4" />
     </div>
   );
 };

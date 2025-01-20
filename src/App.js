@@ -38,10 +38,12 @@ function App() {
       setNavBackColours("rgba(0,0,0,0)");
     } else if (currentPage === "projects" || currentPage === "edu") {
       setNavBackColours("rgba(2, 21, 52, 1)");
-    } else if (currentPage === "exp" || currentPage === "skills") {
+    } else if (currentPage === "exp") {
       setNavBackColours("rgba(56, 56, 56, 1)");
     }
-
+    else {
+      setNavBackColours("rgba(72, 72, 85, 1)");
+    }
     setCurrentPage(currentPage);
     setModal(false);
   };

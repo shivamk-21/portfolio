@@ -387,7 +387,28 @@
   right: 2.5%;
 }
 /* Skills */
-
+.irregular-rectangle4 {
+  width: 100%;
+  height: 7vw;
+  position: absolute;
+  bottom: -5vw;
+  left: 0;
+  background-image: url("../assets/backgrounds/skills.jpg");
+  background-size: 100% 700%;
+  background-position: 41% 0%;
+  clip-path: polygon(0% 0%, 100% 60%, 100% 100%, 0% 100%);
+}
+.skills {
+  position: absolute;
+  height: calc(100% - 5vw);
+  width: 100%;
+  left: 0;
+  top: 5vw;
+  background-image: url("../assets/backgrounds/skills.jpg");
+  background-position: 40% 85%;
+  background-size: 100% 120%;
+  margin-bottom: 6.4%;
+}
 /* Footer */
 .Footer {
   width: 100%;
@@ -395,7 +416,6 @@
   height: 6.4%;
   align-items: center;
   display: flex;
-  margin-top: -2.9vw;
 }
 .contact {
   position: absolute;

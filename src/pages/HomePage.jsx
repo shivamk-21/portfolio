@@ -23,21 +23,21 @@ const HomePage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={gmail} alt="socails-gmail" className={`gmail`} />
+          <img src={gmail} alt="socails-gmail" className='gmail' />
         </a>
         <a
           href="https://www.linkedin.com/in/shivam-kushwaha21/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={linkedin} alt="socails-linkedin" className={`linkedin`} />
+          <img src={linkedin} alt="socails-linkedin" className='linkedin' />
         </a>
         <a
           href="https://github.com/shivamk-21"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={github} alt="socails-github" className={`github`} />
+          <img src={github} alt="socails-github" className='github' />
         </a>
       </div>
       <div className="stars">
