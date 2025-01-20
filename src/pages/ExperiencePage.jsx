@@ -1,57 +1,40 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import { exp } from "../data/experience";
-import { ExperienceCard } from "../features/experience/ExperienceCard";
-import divider from "../assets/tshirts/divider.svg";
-import { useConText } from "../context/Theme";
 
 const ExperiencePage = () => {
-  const { themes } = useConText();
-  const expContainerRef = useRef(null);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  const createCard = (project, designType) => (
+    <div className={`project-card ${designType}`} key={project.id}>
+      <img src={project.image} alt={project.title} />
+      <h3>{project.title}</h3>
+      <div className="time">{project.time}</div>
+      <p>{project.description}</p>
+      <a href={project.link} target="_blank" rel="noopener noreferrer">
+        Learn More
+      </a>
+    </div>
+  );
 
-  const handleScroll = (offset) => {
-    const newScrollLeft = expContainerRef.current.scrollLeft + offset;
-    window.location.href = `#exp`;
-    setTimeout(() => {
-      expContainerRef.current.scrollTo({
-        left: newScrollLeft,
-        behavior: "smooth",
-      });
-      setScrollLeft(newScrollLeft);
-    }, 50);
-  };
+  // Group the cards in sets of two and alternate designs
+  const cardGroups = [];
+  for (let i = 0; i < exp.length; i += 2) {
+    const group = [];
+    group.push(createCard(exp[i], i % 2 === 0 ? "" : "design2"));
+    if (i + 1 < exp.length) {
+      group.push(
+        createCard(exp[i + 1], (i + 1) % 2 === 0 ? "" : "design2")
+      );
+    }
+    cardGroups.push(group);
+  }
 
   return (
-    <div>
-      <div className={`${themes} head`}>
-        <p>Experience</p>
-      </div>
-      <div
-        className={`${themes} scrollButton-left`}
-        onClick={() => handleScroll(-330)}
-        hidden={scrollLeft <= 0}
-      >
-        <div className={`${themes} scrollText`}>&#x21d0;</div>
-      </div>
-      <div
-        className={`${themes} scrollButton-right`}
-        onClick={() => handleScroll(330)}
-        hidden={scrollLeft >= 2000}
-      >
-        <div className={`${themes} scrollText`}> &#x21d2;</div>
-      </div>
-      <div className={`${themes} expBoard`} ref={expContainerRef}>
-        <div className={`${themes} expContainer`}>
-          {exp.workex.map((exp) => (
-            <ExperienceCard key={exp.id} item={exp} />
-          ))}
-          <img src={divider} className={`${themes} divider`} alt="divider" />
-          <div className={`${themes} dividerText`}>Co-Curricular Experience</div>
-          {exp.cocurr.map((exp) => (
-            <ExperienceCard key={exp.id} item={exp} />
-          ))}
+    <div className="experience">
+      <div className="irregular-rectangle3" />
+      {cardGroups.map((group, index) => (
+        <div className="card-group" key={index}>
+          {group}
         </div>
-      </div>
+      ))}
     </div>
   );
 };

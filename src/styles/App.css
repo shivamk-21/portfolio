@@ -239,7 +239,6 @@
   animation-duration: 15s;
 }
 /* Projects */
-/* Projects */
 .irregular-rectangle {
   width: 100%;
   height: 6vw;
@@ -356,125 +355,40 @@
     0px 0px 4vw rgba(255, 255, 255, 0.8), 0px 0px 6vw rgba(255, 255, 255, 0.6);
   -webkit-text-stroke: 3px black; /* Strong black stroke for contrast */
 }
-
-.edu {
+/* experience Page */
+.irregular-rectangle3 {
+  width: 100%;
+  height: 6vw;
   position: absolute;
-  width: 75vw;
-  top: 30vh;
-  left: 3vw;
+  top: -1px;
+  left: 0;
+  background-color: rgba(11, 0, 8, 1);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 100%);
 }
-.head {
-  position: absolute;
-  width: 80vw;
-  height: 35vw;
-  top: 1.7vw;
-  left: 10vw;
-}
-.head > hr {
-  width: 25vw;
-  margin-top: -4vw;
-}
-.head > p {
-  font-size: 2.5vw;
-  font-family: "Bruno Ace";
-  text-align: center;
-  overflow: hidden;
-  margin-left: 25.5%;
-  margin-right: 25.5%;
-  height: 20%;
-  margin-top: 6.5%;
-}
-.projects-buttons {
-  position: absolute;
-  width: 10vw;
-  height: 12vh;
-  top: 6.5vw;
-  font-size: 4.5vw;
-  font-family: "Bruno Ace";
-  background-color: #ffffff;
-  border-radius: 5rem;
-  border: #000000 2px solid;
-  cursor: pointer;
-  z-index: 2;
-  text-align: center;
-}
-.projects-next {
-  right: 20vw;
-}
-.projects-prev {
-  left: 20vw;
-}
-.projects-close {
-  right: 6vw;
-  border: #e6aaaa 2px solid;
-  color: #fc9696;
-}
-.expBoard > h1 {
-  font-size: 3vw;
-  font-family: "Bruno Ace";
-}
-.expBoard {
-  position: absolute;
-  width: 82vw;
-  height: 68vh;
-  top: 27vh;
-  left: -2vw;
-  border: #000000 0.2vw solid;
-  border-radius: 2rem;
-  overflow: hidden;
-  padding-left: 2vw;
-  left: 9vw;
-}
-.expBoard > h3 {
-  font-size: 1.5vw;
-  font-family: "Bruno Ace";
-  color: #93969f;
-  width: 45vw;
-  text-align: justify;
-}
-.expBoard > img {
-  width: 30vw;
-  height: 30vw;
-  top: 1vw;
-  position: absolute;
-  right: 3vw;
-  border-radius: 2rem;
-}
-.hexagonal-neomorphic-div {
+.experience {
   position: relative;
-  width: 11vw;
-  height: 12vw;
-  margin-top: -3vw;
-  background-image: url("../assets/skills/hexa.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  overflow: hidden;
+  width: 100%;
+  height: auto;
+  padding-top: 7vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  padding-bottom: 2vw;
 }
-.hexagonal-neomorphic-div > img {
+.project-card > .time {
+  font-size: 1.5vw;
+  font-family: "Itim";
   position: absolute;
-  width: 7.5vw;
-  height: 7.5vw;
-  margin-left: -0.4vw;
-  margin-top: -0.4vw;
+  left: 2.5%;
+  top: 2.5%;
 }
-.row {
-  position: absolute;
-  width: 80vw;
-  height: 15vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.design2 > .time {
+  left: auto;
+  right: 2.5%;
 }
-.second {
-  top: 20vw;
-}
-.third {
-  top: 30vw;
-}
+/* Skills */
+
+/* Footer */
 .Footer {
   width: 100%;
   background-color: black;
@@ -506,111 +420,6 @@
   border-radius: 2rem;
   padding: 1%;
   cursor: pointer;
-}
-.expContainer {
-  display: flex;
-  width: fit-content;
-  height: 100%;
-}
-.expCard {
-  position: relative;
-  width: 25vw;
-  height: 30vw;
-  top: 2vh;
-}
-.pane {
-  position: absolute;
-  width: 25vw;
-  height: 23.5vw;
-  z-index: 3;
-}
-.desc {
-  position: absolute;
-  width: 20vw;
-  height: 10vh;
-  bottom: 0;
-  background-color: rgba(244, 249, 0, 0.29);
-  font-size: 1.1vw;
-  font-family: "Bruno Ace";
-  left: 2vw;
-  border-radius: 1rem;
-  border: #000000 0.2vw solid;
-}
-.desc > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50%;
-}
-.tshirt {
-  position: absolute;
-  width: 20vw;
-  height: 23.5vw;
-  z-index: 4;
-  top: -1vw;
-  left: 3vw;
-}
-.scrollButton-right {
-  position: absolute;
-  width: 6.5vw;
-  height: 5vw;
-  right: 2.5vw;
-  z-index: 5;
-  cursor: pointer;
-  top: 24vw;
-}
-.scrollButton-left {
-  position: absolute;
-  width: 6.5vw;
-  height: 5vw;
-  top: 25vw;
-  left: 5.5vw;
-  z-index: 5;
-  cursor: pointer;
-}
-.scrollText {
-  background-color: white;
-  border-radius: 20rem;
-  border: #000000 0.2vw solid;
-  font-size: 3.5vw;
-  padding: 1vw;
-  font-family: "Bruno Ace";
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-.divider {
-  width: 50vw;
-  height: 10vw;
-  rotate: 90deg;
-  margin-left: -20vw;
-  margin-right: -20vw;
-  margin-top: 3vw;
-  opacity: 70%;
-}
-.dividerText {
-  rotate: -90deg;
-  margin-left: -26vw;
-  margin-right: -24vw;
-  font-size: 1.8vw;
-  font-family: "Bruno Ace";
-  width: 50vw;
-  height: 10vw;
-}
-.eduDark,
-.edu_mobDark,
-.edu_mob {
-  display: none;
-}
-.row_mob {
-  display: none;
-}
-.mob_nav {
-  display: none;
-}
-.web_nav {
-  display: block;
 }
 @media only screen and (max-width: 767px) {
   .App {
