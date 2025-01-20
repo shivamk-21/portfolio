@@ -408,6 +408,70 @@
   background-position: 40% 85%;
   background-size: 100% 120%;
   margin-bottom: 6.4%;
+  text-shadow: 0px 0px 2vw rgb(0, 0, 0),
+    0px 0px 4vw rgba(0, 0, 0, 0.8), 0px 0px 6vw rgba(22, 22, 22, 0.6);
+}
+.skills > p {
+  position: relative;
+  top: -4vw;
+  left: 45vw;
+  width: 10vw;
+  height: 5vw;
+  font-family: "Itim";
+  font-size: 4vw;
+  color: white;
+}
+.skills > img {
+  background-color: rgba(255, 255, 255, 0.712);
+  border-radius: 100rem;
+  padding: 1.5vw;
+  box-shadow: 0 0 5vw 2vw rgb(255, 255, 255);
+  height: 6vw;
+  width: 6vw;
+}
+.py {
+  position: absolute;
+  top: 10vw;
+  left: 14vw;
+}
+.git {
+  position: absolute;
+  top: 15vw;
+  left: 35vw;
+}
+.js {
+  position: absolute;
+  top: 8vw;
+  left: 53vw;
+  border-radius: 2vw !important;
+}
+.react {
+  position: absolute;
+  top: 15vw;
+  left: 70vw;
+}
+.figma {
+  position: absolute;
+  top: 28vw;
+  left: 20vw;
+  border-radius: 5rem !important;
+}
+.ai {
+  position: absolute;
+  top: 4vw;
+  left: 85vw;
+  border-radius: 5rem !important;
+}
+.sql {
+  position: absolute;
+  top: 28vw;
+  left: 85vw;
+  border-radius: 1rem !important;
+}
+.ml {
+  position: absolute;
+  top: 26vw;
+  left: 53vw;
 }
 /* Footer */
 .Footer {
