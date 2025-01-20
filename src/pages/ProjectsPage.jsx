@@ -34,6 +34,7 @@ const ProjectsPage = () => {
           {group}
         </div>
       ))}
+      <div className="irregular-rectangle2" />
     </div>
   );
 };

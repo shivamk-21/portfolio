@@ -36,13 +36,9 @@ function App() {
 
     if (currentPage === "home") {
       setNavBackColours("rgba(0,0,0,0)");
-    } else if (currentPage === "projects") {
+    } else if (currentPage === "projects" || currentPage === "edu") {
       setNavBackColours("rgba(2, 21, 52, 1)");
-    } else if (
-      currentPage === "edu" ||
-      currentPage === "exp" ||
-      currentPage === "skills"
-    ) {
+    } else if (currentPage === "exp" || currentPage === "skills") {
       setNavBackColours("#f1f1f1");
     }
 
