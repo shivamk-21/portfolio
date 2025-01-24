@@ -183,19 +183,19 @@
   top: 0%;
   left: 10%;
   animation-delay: 0s;
-  animation-duration: 6s;
+  animation-duration: 16s;
 }
 .stars span:nth-child(2) {
   top: 0%;
   left: 30%;
   animation-delay: 0.5s;
-  animation-duration: 7s;
+  animation-duration: 10s;
 }
 .stars span:nth-child(3) {
   top: 0%;
   left: 50%;
   animation-delay: 1s;
-  animation-duration: 8s;
+  animation-duration: 18s;
 }
 .stars span:nth-child(4) {
   top: 0%;
@@ -466,60 +466,98 @@
   cursor: none;
 }
 @media only screen and (max-width: 767px) {
-  /* Global */
-  .App {
-    height: 100%;
-  }
   /* HomePage */
   .mainData {
-    height: 100%;
-    width: 100%;
     left: 0;
     top: 0;
-    background-color: red;
-    background-size: auto 100%;
-    background-position: 14% 0%;
+    background-position: 17.5% 0%;
+    height: 100vh;
   }
   .mainData > .firstname {
     font-size: 12vw;
-    top: 10vw;
-    left: 12vw;
+    top: 8vh;
+    left: 50vw;
+    transform: translateX(-50%);
   }
   .mainData > .secondname {
     font-size: 12vw;
-    top: 23vw;
-    left: 12vw;
+    top: 30vw;
+    left: 50vw;
+    transform: translateX(-50%);
   }
   .mainData > .box {
-    width: 90%;
-    height: 25%;
-    top: 60%;
-    left: 5%;
+    width: 90vw;
+    height: 23vh;
+    top: 56.5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  .box > h2 {
+    font-size: 5.5vw;
   }
   .box > p {
     margin-top: 6vw;
-    font-size: 5vw;
+    font-size: 4.5vw;
     text-align: justify;
-    width: 90%;
-    background-color: red;
-    left: 5%;
+    padding: 3vw;
+  }
+  .socails {
+    flex-direction: row;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 71vw;
+    top: 81vh;
+    height: 9vh;
+    justify-content: space-evenly;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
   .gmail {
-    height: 37vw;
-    left: 10vw;
-    top: 140vw;
+    padding-top: 0.5vw;
+    height: 14vw;
   }
   .github {
-    height: 37vw;
-    right: 35vw;
-    top: 140vw;
-    z-index: 1;
+    height: 14vw;
   }
   .linkedin {
-    height: 37vw;
-    right: 8vw;
-    top: 140vw;
+    height: 14vw;
   }
+  .stars {
+    width: 100%;
+    height: 54vh;
+  }
+  .stars span:nth-child(1) {
+    left: 10%;
+  }
+  .stars span:nth-child(6) {
+    left: 30%;
+  }
+  .stars span:nth-child(2) {
+    left: 50%;
+  }
+  .stars span:nth-child(3) {
+    left: 70%;
+  }
+  .stars span:nth-child(10) {
+    left: 100%;
+  }
+  .stars span:nth-child(7) {
+    left: 120%;
+  }
+  .stars span:nth-child(4) {
+    left: 140%;
+  }
+  .stars span:nth-child(8) {
+    left: 150%;
+  }
+  .stars span:nth-child(9) {
+    left: 25%;
+  }
+  .stars span:nth-child(5) {
+    left: 75%;
+  }
+  /* Project Page */
   .projects {
     top: 10vh;
   }

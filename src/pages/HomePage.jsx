@@ -43,13 +43,13 @@ const HomePage = () => {
       <div className="stars">
         <span></span>
         <span></span>
+        {/* <span></span> */}
         <span></span>
         <span></span>
+        {/* <span></span> */}
         <span></span>
         <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        {/* <span></span> */}
         <span></span>
       </div>
     </div>
