@@ -472,6 +472,7 @@
     top: 0;
     background-position: 17.5% 0%;
     height: 100vh;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, -0% 98%);
   }
   .mainData > .firstname {
     font-size: 12vw;
@@ -559,58 +560,40 @@
   }
   /* Project Page */
   .projects {
-    top: 10vh;
+    width: 100%;
   }
-  .projects > p {
-    font-size: 9vw;
-  }
-  .projects > hr {
-    width: 60vw;
-  }
-  .projects > .neo {
-    height: 26vw;
-    width: 41vw;
-    margin-left: 19vw;
-    font-size: 6.7vw;
-    padding-top: 12vw;
-  }
-  .head {
-    top: 10vw;
-  }
-  .head > hr {
-    width: 35vw;
-    top: 30vw;
-    position: inherit;
-    left: 24.5vw;
-  }
-  .head > p {
-    font-size: 4.5vw;
-    top: 6vw;
-    position: inherit;
-    width: 60vw;
+  .project-card {
+    width: 90%;
+    height: 110vw;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    overflow: hidden;
-    margin-left: 15%;
-    margin-right: 25.5%;
-    height: 55%;
-    margin-top: 11%;
   }
-  .projects-buttons {
-    width: 12vw;
-    height: 12vw;
-    top: 90vw;
-    font-size: 7vw;
+  .project-card > h3,
+  .design2 > h3 {
+    font-size: 5vw;
+    margin-top: 45vw;
+    text-align: center;
   }
-  .projects-next {
-    right: 2vw;
+  .project-card > p,
+  .design2 > p {
+    font-size: 3.5vw;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: 0;
   }
-  .projects-prev {
-    left: 2vw;
+  .project-card > img,
+  .design2 > img {
+    width: 80%;
+    height: 40vw;
+    top: 0vw;
+    left: 10%;
   }
-  .projects-close {
-    left: 11vw;
-    top: 25vw;
+  .design2 > a {
+    margin-left: 0%;
   }
+  /* Education Page */
   .expBoard > h1 {
     font-size: 5.5vw;
     top: 53vw;
