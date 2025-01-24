@@ -28,13 +28,11 @@ const ProjectsPage = () => {
 
   return (
     <div className="projects">
-      <div className="irregular-rectangle" />
       {cardGroups.map((group, index) => (
         <div className="card-group" key={index}>
           {group}
         </div>
       ))}
-      <div className="irregular-rectangle2" />
     </div>
   );
 };

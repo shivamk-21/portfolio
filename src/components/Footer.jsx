@@ -10,16 +10,16 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        ✉️Contact Me
+        Shivam Kushwaha
       </a>
       <Link
         to="home"
         spy={true}
         smooth={true}
         duration={800}
-        className='top'
+        className='click'
       >
-        Back to Top &#x1F851;
+        Don't Click Me
       </Link>
     </div>
   );

@@ -20,23 +20,18 @@ const ExperiencePage = () => {
     const group = [];
     group.push(createCard(exp[i], i % 2 === 0 ? "" : "design2"));
     if (i + 1 < exp.length) {
-      group.push(
-        createCard(exp[i + 1], (i + 1) % 2 === 0 ? "" : "design2")
-      );
+      group.push(createCard(exp[i + 1], (i + 1) % 2 === 0 ? "" : "design2"));
     }
     cardGroups.push(group);
   }
 
   return (
     <div className="experience">
-      <div className="irregular-rectangle3" />
       {cardGroups.map((group, index) => (
         <div className="card-group" key={index}>
           {group}
         </div>
       ))}
-      
-      <div className="irregular-rectangle4" />
     </div>
   );
 };

@@ -41,36 +41,37 @@
 /* HomePage */
 .mainData {
   position: absolute;
-  height: 100%;
+  height: 112vh;
   width: 100%;
   left: 0;
   top: 0;
   background-image: url("../assets/backgrounds/home.png");
-  background-size: 100% auto;
+  background-size: cover;
   background-position: 0 25%;
   background-repeat: no-repeat;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 .mainData > .firstname {
   font-family: "Cherry Bomb";
-  font-size: 6vw;
+  font-size: min(14vh, 7vw);
   color: white;
   position: absolute;
-  top: 6vw;
-  left: 38vw;
+  top: 12vh;
+  left: max(48vh, 38vw);
 }
 .mainData > .secondname {
   font-family: "Cherry Bomb";
-  font-size: 6vw;
+  font-size: min(14vh, 7vw);
   color: white;
   position: absolute;
-  top: 12.5vw;
-  left: 47.5vw;
+  top: 26vh;
+  left: max(57vh, 47.5vw);
 }
 .mainData > .box {
   position: absolute;
   width: 76vw;
   height: 12.5vw;
-  top: 32.5vw;
+  top: 70.5vh;
   left: 7vw;
   background-color: rgba(3, 23, 56, 0.53);
   border-radius: 2rem;
@@ -93,7 +94,7 @@
   position: absolute;
   width: 4.5vw;
   height: 12.5vw;
-  bottom: 1vw;
+  top: 70.5vh;
   right: 7vw;
   background-color: rgba(3, 23, 56, 0.94);
   border-radius: 100rem;
@@ -155,7 +156,7 @@
 .stars span::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 0%;
   transform: translateY(-50%);
   width: 300px;
   height: 1px;
@@ -179,77 +180,66 @@
 }
 
 .stars span:nth-child(1) {
-  top: 5%;
+  top: 0%;
   left: 10%;
   animation-delay: 0s;
   animation-duration: 6s;
 }
 .stars span:nth-child(2) {
-  top: 15%;
+  top: 0%;
   left: 30%;
   animation-delay: 0.5s;
   animation-duration: 7s;
 }
 .stars span:nth-child(3) {
-  top: 25%;
+  top: 0%;
   left: 50%;
   animation-delay: 1s;
   animation-duration: 8s;
 }
 .stars span:nth-child(4) {
-  top: 35%;
+  top: 0%;
   left: 70%;
   animation-delay: 1.5s;
   animation-duration: 9s;
 }
 .stars span:nth-child(5) {
-  top: 45%;
+  top: 0%;
   left: 90%;
   animation-delay: 2s;
   animation-duration: 10s;
 }
 .stars span:nth-child(6) {
-  top: 55%;
+  top: 0%;
   left: 20%;
   animation-delay: 2.5s;
   animation-duration: 11s;
 }
 .stars span:nth-child(7) {
-  top: 65%;
-  left: 40%;
+  top: 0%;
+  left: 45%;
   animation-delay: 3s;
   animation-duration: 12s;
 }
 .stars span:nth-child(8) {
-  top: 75%;
-  left: 60%;
+  top: 0%;
+  left: 65%;
   animation-delay: 3.5s;
   animation-duration: 13s;
 }
 .stars span:nth-child(9) {
-  top: 85%;
+  top: 0%;
   left: 80%;
   animation-delay: 4s;
   animation-duration: 14s;
 }
 .stars span:nth-child(10) {
-  top: 95%;
+  top: 0%;
   left: 50%;
   animation-delay: 4.5s;
   animation-duration: 15s;
 }
 /* Projects */
-.irregular-rectangle {
-  width: 100%;
-  height: 6vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("../assets/backgrounds/home.png");
-  background-position: 0% 86%;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 100%);
-}
-
 .projects {
   position: relative;
   width: 100%;
@@ -258,7 +248,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 2vw;
+  padding-bottom: 4vw;
 }
 
 .card-group {
@@ -318,29 +308,20 @@
   top: 10%;
   border-radius: 2rem;
   object-fit: contain;
-}
-.irregular-rectangle2 {
-  width: 100%;
-  height: 7vw;
-  position: absolute;
-  bottom: -5vw;
-  left: 0;
-  background-image: url("../assets/backgrounds/edu.jpg");
-  background-size: 100% auto;
-  background-position: 0 0%;
-  clip-path: polygon(0% 0%, 100% 60%, 100% 100%, 0% 100%);
+  mix-blend-mode: darken;
 }
 /* Education Page */
 .education {
   position: absolute;
-  height: calc(100% - 5vw);
+  height: 121vh;
   width: 100%;
   left: 0;
-  top: 5vw;
+  top: -7vh;
   background-image: url("../assets/backgrounds/edu.jpg");
   background-size: cover;
   background-position: 0% 80%;
   background-repeat: no-repeat;
+  clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%);
 }
 .education > p {
   font-size: 3vw;
@@ -348,23 +329,14 @@
   text-align: center;
   width: 45%;
   height: 20%;
-  margin-top: 25vw;
-  margin-left: 27.5%;
+  margin-top: 75.5vh;
+  margin-left: 28vw;
   color: white;
   text-shadow: 0px 0px 2vw rgba(255, 255, 255, 1),
     0px 0px 4vw rgba(255, 255, 255, 0.8), 0px 0px 6vw rgba(255, 255, 255, 0.6);
-  -webkit-text-stroke: 3px black; /* Strong black stroke for contrast */
+  -webkit-text-stroke: 0.1vw black; /* Strong black stroke for contrast */
 }
 /* experience Page */
-.irregular-rectangle3 {
-  width: 100%;
-  height: 6vw;
-  position: absolute;
-  top: -1px;
-  left: 0;
-  background-color: rgba(11, 0, 8, 1);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 100%);
-}
 .experience {
   position: relative;
   width: 100%;
@@ -373,7 +345,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 2vw;
+  padding-bottom: 6vw;
 }
 .project-card > .time {
   font-size: 1.5vw;
@@ -387,33 +359,23 @@
   right: 2.5%;
 }
 /* Skills */
-.irregular-rectangle4 {
-  width: 100%;
-  height: 7vw;
-  position: absolute;
-  bottom: -5vw;
-  left: 0;
-  background-image: url("../assets/backgrounds/skills.jpg");
-  background-size: 100% 700%;
-  background-position: 41% 0%;
-  clip-path: polygon(0% 0%, 100% 60%, 100% 100%, 0% 100%);
-}
 .skills {
   position: absolute;
-  height: calc(100% - 5vw);
+  height: 107vh;
   width: 100%;
   left: 0;
-  top: 5vw;
+  top: -3vw;
   background-image: url("../assets/backgrounds/skills.jpg");
   background-position: 40% 85%;
-  background-size: 100% 120%;
+  background-size: cover;
   margin-bottom: 6.4%;
-  text-shadow: 0px 0px 2vw rgb(0, 0, 0),
-    0px 0px 4vw rgba(0, 0, 0, 0.8), 0px 0px 6vw rgba(22, 22, 22, 0.6);
+  text-shadow: 0px 0px 2vw rgb(0, 0, 0), 0px 0px 4vw rgba(0, 0, 0, 0.8),
+    0px 0px 6vw rgba(22, 22, 22, 0.6);
+  clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 100%);
 }
 .skills > p {
   position: relative;
-  top: -4vw;
+  top: 2vw;
   left: 45vw;
   width: 10vw;
   height: 5vw;
@@ -431,46 +393,46 @@
 }
 .py {
   position: absolute;
-  top: 10vw;
-  left: 14vw;
+  top: 36vh;
+  left: 10vw;
 }
 .git {
   position: absolute;
-  top: 15vw;
+  top: 50vh;
   left: 35vw;
 }
 .js {
   position: absolute;
-  top: 8vw;
+  top: 35vh;
   left: 53vw;
   border-radius: 2vw !important;
 }
 .react {
   position: absolute;
-  top: 15vw;
+  top: 45vh;
   left: 70vw;
 }
 .figma {
   position: absolute;
-  top: 28vw;
+  top: 75vh;
   left: 20vw;
-  border-radius: 5rem !important;
+  border-radius: 3rem !important;
 }
 .ai {
   position: absolute;
-  top: 4vw;
+  top: 25vh;
   left: 85vw;
   border-radius: 5rem !important;
 }
 .sql {
   position: absolute;
-  top: 28vw;
+  top: 74vh;
   left: 85vw;
   border-radius: 1rem !important;
 }
 .ml {
   position: absolute;
-  top: 26vw;
+  top: 72vh;
   left: 53vw;
 }
 /* Footer */
@@ -485,13 +447,13 @@
   position: absolute;
   width: 50%;
   font-size: 2vw;
-  font-family: "Bruno Ace";
+  font-family: "Itim";
   color: #ffffff;
   padding-left: 1%;
   cursor: pointer;
   text-decoration: none;
 }
-.top {
+.click {
   position: absolute;
   height: 1%;
   align-items: center;
@@ -500,47 +462,47 @@
   font-family: "Bruno Ace";
   color: #ffffff;
   right: 1vw;
-  border: #ffffff 0.2vw solid;
-  border-radius: 2rem;
   padding: 1%;
-  cursor: pointer;
+  cursor: none;
 }
 @media only screen and (max-width: 767px) {
+  /* Global */
   .App {
     height: 100%;
   }
-  .lamp {
-    display: none;
-  }
-  .bulb {
-    display: none;
-  }
+  /* HomePage */
   .mainData {
-    height: 130vw;
-    width: 60vw;
-    left: 8vw;
-    top: 20vw;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: red;
+    background-size: auto 100%;
+    background-position: 14% 0%;
   }
-  .mainData > div {
+  .mainData > .firstname {
     font-size: 12vw;
-    text-align: center;
-    width: 70vw;
+    top: 10vw;
+    left: 12vw;
   }
-  .mainData > hr {
-    width: 60vw;
-    margin-left: 5vw;
-    height: 0.5vw;
+  .mainData > .secondname {
+    font-size: 12vw;
+    top: 23vw;
+    left: 12vw;
   }
-  .mainData > h2 {
-    font-size: 6vw;
-    text-align: center;
-    width: 70vw;
+  .mainData > .box {
+    width: 90%;
+    height: 25%;
+    top: 60%;
+    left: 5%;
   }
-  .mainData > p {
+  .box > p {
     margin-top: 6vw;
     font-size: 5vw;
     text-align: justify;
-    width: 70vw;
+    width: 90%;
+    background-color: red;
+    left: 5%;
   }
   .gmail {
     height: 37vw;
