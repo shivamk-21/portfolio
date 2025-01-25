@@ -1,3 +1,5 @@
+// TODO :Fix and Add a New Footer
+// TODO : Add Attribution for all images and icons used
 import React from "react";
 import { Link } from "react-scroll";
 import "../styles/Global.css";
