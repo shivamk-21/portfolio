@@ -31,7 +31,7 @@ export const exp = [
     id: 3,
     title: "Technovate Coordinator",
     image:
-      "https://yt3.googleusercontent.com/Z43IStFfUqCSI30QaxCzZk2AYdxZGPqCzCrcrbgDArVywjPYcRgN8KRpx6O6ZmPvUDVo1juRpw=s900-c-k-c0x00ffffff-no-rj",
+      "https://www.knowafest.com/files/uploads/TECHNOVATE%20LOGO%20WITH%20NAME%20BLACK-2019120601.png",
     time: "Aug 2023 - Feb 2024",
     description:
       "Coordinated Technovate, a flagship event celebrating technological advancements. Managed logistics, partnered with sponsors, and ensured smooth execution of hackathons, showcases, and speaker sessions. Played a key role in connecting students with industry leaders.",

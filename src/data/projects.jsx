@@ -40,7 +40,7 @@ export const projectDetails = [
       "Developed the official website for Technovate 2k24, the annual college fest at IIIT-NR. The website was built using TypeScript and Next.js to manage event details, registrations, and information. #WebDevelopment #EventManagement #TypeScript #NextJS #Technovate",
     link: "https://github.com/shivamk-21/technovate2k23",
     image:
-      "https://yt3.googleusercontent.com/Z43IStFfUqCSI30QaxCzZk2AYdxZGPqCzCrcrbgDArVywjPYcRgN8KRpx6O6ZmPvUDVo1juRpw=s900-c-k-c0x00ffffff-no-rj",
+      "https://www.knowafest.com/files/uploads/TECHNOVATE%20LOGO%20WITH%20NAME%20BLACK-2019120601.png",
   },
   {
     id: 6,

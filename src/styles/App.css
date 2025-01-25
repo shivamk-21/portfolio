@@ -283,6 +283,7 @@
 
 .design2 > a {
   margin-left: 45%;
+  font-size: 1vw;
 }
 
 .project-card > h3 {
@@ -309,6 +310,9 @@
   border-radius: 2rem;
   object-fit: contain;
   mix-blend-mode: darken;
+}
+.project-card > a {
+  font-size: 1vw;
 }
 /* Education Page */
 .education {
@@ -596,8 +600,10 @@
     top: 0vw;
     left: 10%;
   }
+  .project-card > a,
   .design2 > a {
     margin-left: 0%;
+    font-size: 3vw;
   }
   /* Education Page */
   .education {
@@ -628,7 +634,7 @@
   .skills > p {
     font-size: 10vw;
     top: 5vw;
-    left: 45vw;
+    left: 40vw;
   }
   .skills > img {
     height: 12vw;
