@@ -530,7 +530,7 @@
     height: 14vw;
   }
   .stars {
-    width: 100%;
+    width: 92%;
     height: 54vh;
   }
   .stars span:nth-child(1) {
@@ -660,6 +660,7 @@
   .ai {
     top: 52vh;
     left: 76vw;
+    border-radius: 1rem !important;
   }
   .sql {
     top: 80vh;
@@ -668,5 +669,9 @@
   .ml {
     top: 65vh;
     left: 45vw;
+  }
+  /* Footer */
+  .Footer {
+    display: none;
   }
 }
