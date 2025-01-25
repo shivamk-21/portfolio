@@ -1,0 +1,83 @@
+/* Global */
+.App {
+  height: 100%;
+}
+.page {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+}
+/* Nav Bar */
+.nav {
+  position: fixed;
+  width: 38.5vw;
+  height: 3vw;
+  border-radius: 100rem;
+  left: -0.5vw;
+  margin-top: 0.5vw;
+  padding-left: 0.5vw;
+  margin-left: 1.5vw;
+  padding-top: 1vw;
+  top: 0vw;
+  z-index: 99;
+}
+.nav > .item {
+  color: white;
+  font-family: "Itim";
+  font-size: 1.8vw;
+  margin: 0.5vw;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  line-height: 2vw;
+}
+.item {
+  text-decoration: none;
+}
+.item > b {
+  border: 0.2vw solid white;
+  border-radius: 2rem;
+  padding: 0.1vw 0.7vw 0.2vw 0.7vw;
+}
+
+/* Footer */
+.Footer {
+  width: 100%;
+  background-color: black;
+  height: 6.4%;
+  align-items: center;
+  display: flex;
+}
+.contact {
+  position: absolute;
+  width: 50%;
+  font-size: 2vw;
+  font-family: "Itim";
+  color: #ffffff;
+  padding-left: 1%;
+  cursor: pointer;
+  text-decoration: none;
+}
+.click {
+  position: absolute;
+  height: 1%;
+  align-items: center;
+  display: flex;
+  font-size: 1.5vw;
+  font-family: "Bruno Ace";
+  color: #ffffff;
+  right: 1vw;
+  padding: 1%;
+  cursor: none;
+}
+@media only screen and (max-width: 767px),
+  only screen and (orientation: portrait) {
+  /* Nav Bar */
+  .web_nav {
+    display: none;
+  }
+
+  /* Footer */
+  .Footer {
+    display: none;
+  }
+}

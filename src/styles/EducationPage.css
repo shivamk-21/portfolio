@@ -1,0 +1,42 @@
+/* Education Page */
+.education {
+  position: absolute;
+  height: 121vh;
+  width: 100%;
+  left: 0;
+  top: -7vh;
+  background-image: url("../assets/backgrounds/edu.jpg");
+  background-size: cover;
+  background-position: 0% 80%;
+  background-repeat: no-repeat;
+  clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%);
+}
+.education > p {
+  font-size: 3vw;
+  font-family: "Itim";
+  text-align: center;
+  width: 45%;
+  height: 20%;
+  margin-top: 75.5vh;
+  margin-left: 28vw;
+  color: white;
+  text-shadow: 0px 0px 2vw rgba(255, 255, 255, 1),
+    0px 0px 4vw rgba(255, 255, 255, 0.8), 0px 0px 6vw rgba(255, 255, 255, 0.6);
+  -webkit-text-stroke: 0.1vw black; /* Strong black stroke for contrast */
+}
+
+@media only screen and (max-width: 767px),
+  only screen and (orientation: portrait) {
+  /* Education Page */
+  .education {
+    height: 100vh;
+    clip-path: polygon(0% 2%, 100% 5%, 100% 95%, 0% 98%);
+    background-position: 36% 0%;
+  }
+  .education > p {
+    font-size: 8vw;
+    margin-top: 65vh;
+    margin-left: 10vw;
+    width: 80%;
+  }
+}

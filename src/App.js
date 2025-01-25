@@ -7,7 +7,7 @@ import ExperiencePage from "./pages/ExperiencePage";
 import EducationPage from "./pages/EducationPage";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
-import "./styles/App.css";
+import "./styles/Global.css";
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
   const [navBackColours, setNavBackColours] = useState("transparent");

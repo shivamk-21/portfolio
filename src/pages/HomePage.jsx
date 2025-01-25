@@ -2,6 +2,7 @@ import React from "react";
 import github from "../assets/logos/github.png";
 import gmail from "../assets/logos/gmail.png";
 import linkedin from "../assets/logos/linkedin.png";
+import "../styles/HomePage.css";
 const HomePage = () => {
   return (
     <div>

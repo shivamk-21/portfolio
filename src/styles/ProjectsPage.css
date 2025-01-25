@@ -1,0 +1,117 @@
+/* Projects */
+.projects {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 7vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4vw;
+}
+
+.card-group {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.project-card {
+  width: 80%;
+  height: 20vw;
+  border-radius: 2rem;
+  padding: 2%;
+  margin: 1%;
+  box-shadow: 0 0 2vw 1vw rgba(0, 0, 0, 0.17);
+  position: relative;
+  left: 10%;
+}
+
+.design2 > h3 {
+  text-align: right;
+}
+
+.design2 > p {
+  margin-left: 45%;
+}
+
+.design2 > img {
+  left: 2%;
+}
+
+.design2 > a {
+  margin-left: 45%;
+  font-size: 1vw;
+}
+
+.project-card > h3 {
+  font-size: 2.5vw;
+  font-family: "Itim";
+  margin-top: 1vw;
+  left: 5%;
+}
+
+.project-card > p {
+  font-size: 1.4vw;
+  font-family: "Itim";
+  width: 55%;
+  text-align: justify;
+  padding-top: 1.5%;
+}
+
+.project-card > img {
+  width: 40%;
+  height: 20vw;
+  position: absolute;
+  right: 2%;
+  top: 10%;
+  border-radius: 2rem;
+  object-fit: contain;
+  mix-blend-mode: darken;
+}
+.project-card > a {
+  font-size: 1vw;
+}
+
+@media only screen and (max-width: 767px),
+  only screen and (orientation: portrait) {
+  /* Project Page */
+  .projects {
+    width: 100%;
+    margin-bottom: 10vw;
+  }
+  .project-card {
+    width: 90%;
+    height: 110vw;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  .project-card > h3,
+  .design2 > h3 {
+    font-size: 5vw;
+    margin-top: 45vw;
+    text-align: center;
+  }
+  .project-card > p,
+  .design2 > p {
+    font-size: 3.5vw;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: 0;
+  }
+  .project-card > img,
+  .design2 > img {
+    width: 80%;
+    height: 40vw;
+    top: 0vw;
+    left: 10%;
+  }
+  .project-card > a,
+  .design2 > a {
+    margin-left: 0%;
+    font-size: 3vw;
+  }
+}

@@ -1,5 +1,7 @@
-import React from "react";// Assuming your CSS is in a separate file
+import React from "react"; // Assuming your CSS is in a separate file
 import "../styles/Firefly.scss";
+import "../styles/EducationPage.css";
+
 const EducationPage = () => {
   const quantity = 18; // Number of fireflies to generate
 
@@ -17,9 +19,7 @@ const EducationPage = () => {
           CGPA: 8.88
         </p>
       </div>
-      <div className="fireflyNet">
-        {fireflies}
-      </div>
+      <div className="fireflyNet">{fireflies}</div>
     </div>
   );
 };

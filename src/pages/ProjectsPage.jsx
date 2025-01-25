@@ -1,5 +1,6 @@
 import React from "react";
 import { projectDetails } from "../data/projects";
+import "../styles/ProjectsPage.css";
 
 const ProjectsPage = () => {
   const createCard = (project, designType) => (

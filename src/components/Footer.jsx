@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import "../styles/Global.css";
 
 const Footer = () => {
   return (
@@ -19,7 +20,7 @@ const Footer = () => {
         duration={800}
         className='click'
       >
-        Don't Click Me
+        Don't Click Me 
       </Link>
     </div>
   );

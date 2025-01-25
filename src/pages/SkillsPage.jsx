@@ -7,6 +7,7 @@ import figma from "../assets/logos/figma.png";
 import ai from "../assets/logos/ai.png";
 import sql from "../assets/logos/sql.png";
 import ml from "../assets/logos/ml.png";
+import "../styles/SkillsPage.css";
 
 const SkillsPage = () => {
   return (
@@ -21,7 +22,6 @@ const SkillsPage = () => {
       <img src={ai} alt="ai" className="ai" />
       <img src={sql} alt="sql" className="sql" />
       <img src={ml} alt="ml" className="ml" />
-      
     </div>
   );
 };

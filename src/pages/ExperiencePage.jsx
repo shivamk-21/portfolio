@@ -1,5 +1,7 @@
 import React from "react";
 import { exp } from "../data/experience";
+import "../styles/ExperiencePage.css";
+import "../styles/ProjectsPage.css";
 
 const ExperiencePage = () => {
   const createCard = (project, designType) => (
