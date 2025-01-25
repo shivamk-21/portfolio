@@ -465,7 +465,8 @@
   padding: 1%;
   cursor: none;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px),
+  only screen and (orientation: portrait) {
   /* HomePage */
   .mainData {
     left: 0;
@@ -561,6 +562,7 @@
   /* Project Page */
   .projects {
     width: 100%;
+    margin-bottom: 10vw;
   }
   .project-card {
     width: 90%;
@@ -594,36 +596,18 @@
     margin-left: 0%;
   }
   /* Education Page */
-  .expBoard > h1 {
-    font-size: 5.5vw;
-    top: 53vw;
-    position: absolute;
-    width: 78vw;
-    text-align: center;
+  .education {
+    height: 100vh;
+    clip-path: polygon(0% 2%, 100% 5%, 100% 95%, 0% 98%);
+    background-position: 36% 0%;
   }
-  .expBoard {
-    position: absolute;
-    width: 78vw;
-    height: 80vh;
-    top: 10vh;
-    border: #000000 1vw solid;
+  .education > p {
+    font-size: 8vw;
+    margin-top: 65vh;
+    margin-left: 10vw;
+    width: 80%;
   }
-  .expBoard > h3 {
-    font-size: 3.2vw;
-    width: 64vw;
-    position: relative;
-    top: 63vw;
-    padding-left: 6vw;
-    color: rgb(121, 119, 119);
-  }
-  .expBoard > img {
-    width: 35vw;
-    height: 35vw;
-    top: 18vw;
-    position: absolute;
-    left: 24vw;
-    border-radius: 2rem;
-  }
+  /*  */
   .contact {
     font-size: 4.5vw;
     padding-left: 5%;

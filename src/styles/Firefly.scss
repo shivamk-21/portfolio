@@ -2,10 +2,10 @@
 
 .fireflyNet {
   position: absolute;
-  top: 20vw;
+  top: 50vh;
   left: 0;
   width: 100%;
-  height: calc(100% - 20vw);
+  height: calc(100% - 50vh);
   overflow: hidden;
   pointer-events: none;
 }
@@ -14,13 +14,25 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 0.4vw;
-  height: 0.4vw;
+  width: 0.7vw;
+  height: 0.7vw;
   margin: -0.2vw 0 0 9.8vw;
   animation: ease 200s alternate infinite;
   pointer-events: none;
 }
 
+@media only screen and (max-width: 767px),
+  only screen and (orientation: portrait) {
+  .fireflyNet{
+    height: 120vw;
+    top:30vh;
+    width:100%;
+  }
+  .firefly {
+    width: 2vw;
+    height: 2vw;
+  }
+}
 .firefly::before,
 .firefly::after {
   content: '';
@@ -33,7 +45,7 @@
 
 .firefly::before {
   background: black;
-  opacity: 0.4;
+  opacity: 0;
   animation: drift ease alternate infinite;
 }
 
