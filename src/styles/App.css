@@ -607,7 +607,14 @@
     margin-left: 10vw;
     width: 80%;
   }
-  /*  */
+  /* Experience Page  */
+  .project-card > .time,
+  .design2 > .time {
+    font-size: 4vw;
+    top: 19.8vh;
+    width: 100%;
+    left: 2%;
+  }
   .contact {
     font-size: 4.5vw;
     padding-left: 5%;
