@@ -1,117 +1,97 @@
 /* Projects */
+/* Top padding clears the home illustration, which overflows 12vh into this section */
 .projects {
-  position: relative;
-  width: 100%;
-  height: auto;
-  padding-top: 7vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 4vw;
+  padding: calc(12vh + 1.5rem) 5vw calc(7vh + 3rem);
 }
 
-.card-group {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+.featured-list,
+.project-grid {
+  display: grid;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  max-width: 72rem;
+  margin: 0 auto;
+}
+.project-grid {
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  margin-top: clamp(1rem, 2.5vw, 2rem);
 }
 
 .project-card {
-  width: 80%;
-  height: 20vw;
-  border-radius: 2rem;
-  padding: 2%;
-  margin: 1%;
-  box-shadow: 0 0 2vw 1vw rgba(0, 0, 0, 0.17);
-  position: relative;
-  left: 10%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0 0.75rem 2.5rem rgba(22, 22, 58, 0.12);
 }
-
-.design2 > h3 {
-  text-align: right;
+.project-card .media {
+  height: 9rem;
+  padding: 1.25rem;
+  background: #f7f7fc;
 }
-
-.design2 > p {
-  margin-left: 45%;
-}
-
-.design2 > img {
-  left: 2%;
-}
-
-.design2 > a {
-  margin-left: 45%;
-  font-size: 1vw;
-}
-
-.project-card > h3 {
-  font-size: 2.5vw;
-  font-family: "Itim";
-  margin-top: 1vw;
-  left: 5%;
-}
-
-.project-card > p {
-  font-size: 1.4vw;
-  font-family: "Itim";
-  width: 55%;
-  text-align: justify;
-  padding-top: 1.5%;
-}
-
-.project-card > img {
-  width: 40%;
-  height: 20vw;
-  position: absolute;
-  right: 2%;
-  top: 10%;
-  border-radius: 2rem;
+.project-card .media img {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  mix-blend-mode: darken;
+  mix-blend-mode: multiply;
 }
-.project-card > a {
-  font-size: 1vw;
+.project-card .body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: clamp(1.1rem, 2vw, 1.75rem);
+}
+.project-card h3 {
+  margin: 0;
+  font-family: "Itim";
+  font-size: clamp(1.25rem, 1.8vw, 1.6rem);
+  line-height: 1.2;
+  color: var(--ink);
+}
+.project-card p {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: clamp(0.95rem, 1.05vw, 1.05rem);
+  line-height: 1.6;
+  color: var(--muted);
+}
+.project-card .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* Featured: media beside the text, alternating sides */
+.featured {
+  flex-direction: row;
+}
+.featured:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.featured .media {
+  flex: 0 0 38%;
+  height: auto;
+  min-height: 16rem;
+  box-sizing: border-box;
+}
+.featured h3 {
+  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
 }
 
 @media only screen and (max-width: 767px),
   only screen and (orientation: portrait) {
   /* Project Page */
   .projects {
-    width: 100%;
-    margin-bottom: 10vw;
+    padding: 2.5rem 5vw calc(7vh + 2rem);
   }
-  .project-card {
-    width: 90%;
-    height: 110vw;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+  .featured,
+  .featured:nth-child(even) {
+    flex-direction: column;
   }
-  .project-card > h3,
-  .design2 > h3 {
-    font-size: 5vw;
-    margin-top: 45vw;
-    text-align: center;
-  }
-  .project-card > p,
-  .design2 > p {
-    font-size: 3.5vw;
-    width: 80%;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-left: 0;
-  }
-  .project-card > img,
-  .design2 > img {
-    width: 80%;
-    height: 40vw;
-    top: 0vw;
-    left: 10%;
-  }
-  .project-card > a,
-  .design2 > a {
-    margin-left: 0%;
-    font-size: 3vw;
+  .featured .media {
+    flex: none;
+    min-height: 0;
+    height: 11rem;
   }
 }

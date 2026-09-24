@@ -1,41 +1,133 @@
+import mahyco from "../assets/logos/mahyco.png";
+
+// `type` picks the timeline group: "Work" or "Leadership"
 export const exp = [
   {
     id: 1,
-    title: "Mahyco-IIIT Project Member",
-    image:
-      "https://yt3.googleusercontent.com/ytc/AIdro_kx3pmB-jM_VTF2_ZiiHCKxNEgD7MLKTpC5t8Qe9HBpmpg=s900-c-k-c0x00ffffff-no-rj",
-    time: "Aug 2023 - Aug 2024",
-    description:
-      "Worked on a collaborative project between Mahyco and IIIT focusing on agricultural innovations using AI and Drone technologies to enhance crop management and yield predictions. Conducted extensive research and development to integrate cutting-edge solutions into agritech.",
+    type: "Work",
+    role: "AIML Research Intern",
+    org: "Mahyco Pvt. Ltd.",
+    image: mahyco,
+    time: "Nov 2022 – Jul 2024",
+    points: [
+      <>
+        Engineered a computer vision pipeline for automated crop disease
+        identification from <b>24 MP</b> drone imagery.
+      </>,
+      <>
+        Raised identification accuracy to <b>94%</b>, reducing manual
+        inspection time.
+      </>,
+      <>
+        <b>Patent pending</b> disease detection system with a <b>6%</b> error
+        rate on the test set.
+      </>,
+    ],
     link: "https://drive.google.com/file/d/1nGwvlThenUQ4rMTRjYBzTEp1P4xz7t8V/view?usp=sharing",
+    linkLabel: "Certificate",
   },
   {
     id: 2,
-    title: "Samsung PRISM Intern",
+    type: "Work",
+    role: "PRISM Intern",
+    org: "Samsung R&D",
     image: "https://www.samsungprism.com/assets/images/prism_logo.png",
-    time: "Aug 2023 - Apr 2023",
-    description:
-      "Contributed to Samsung's PRISM program by developing innovative solutions to real-world challenges in software optimization and user experience design. Collaborated with a multidisciplinary team to deliver results aligned with Samsung's vision of technological excellence.",
+    time: "Aug 2023 – Mar 2024",
+    points: [
+      <>
+        Built a pet action recognition system on a custom dataset of{" "}
+        <b>1,300+ seconds</b> of video.
+      </>,
+      <>
+        Predicts <b>4</b> pet behaviours across varied real-world scenarios.
+      </>,
+      <>
+        Reached <b>60.97%</b> accuracy in real-time behaviour tracking.
+      </>,
+    ],
     link: "https://drive.google.com/file/d/1cNOok5wI7D26ZOpabxFhTWrVKFy1_nAv/view?usp=sharing",
+    linkLabel: "Certificate",
   },
   {
     id: 6,
-    title: "IIIT Technical Secretary",
+    type: "Leadership",
+    role: "Science & Technology Secretary",
+    org: "IIIT Naya Raipur",
     image: "https://sac.iiitnr.ac.in/_next/static/media/sac_logo.84e88f42.png",
-    time: "Aug 2023 - Aug 2024",
-    description:
-      "Elected Technical Secretary at IIIT, leading initiatives to promote technological innovation and community engagement. Organized coding competitions, workshops, and seminars while fostering an inclusive and collaborative technical environment.",
+    time: "2023 – 2024",
+    points: [
+      <>
+        Elected to lead initiatives promoting technological innovation and
+        community engagement.
+      </>,
+      <>Organized coding competitions, workshops and seminars.</>,
+    ],
     link: "https://sac.iiitnr.ac.in/team",
+    linkLabel: "Team page",
   },
   {
     id: 3,
-    title: "Technovate Coordinator",
+    type: "Leadership",
+    role: "Technovate Coordinator",
+    org: "IIIT Naya Raipur",
     image:
       "https://www.knowafest.com/files/uploads/TECHNOVATE%20LOGO%20WITH%20NAME%20BLACK-2019120601.png",
-    time: "Aug 2023 - Feb 2024",
-    description:
-      "Coordinated Technovate, a flagship event celebrating technological advancements. Managed logistics, partnered with sponsors, and ensured smooth execution of hackathons, showcases, and speaker sessions. Played a key role in connecting students with industry leaders.",
+    time: "Aug 2023 – Feb 2024",
+    points: [
+      <>
+        Coordinated the flagship tech fest: logistics, sponsors, hackathons,
+        showcases and speaker sessions.
+      </>,
+      <>Connected students with industry leaders.</>,
+    ],
     link: "https://www.instagram.com/technovate_iiitnr/?hl=en",
+    linkLabel: "Instagram",
+  },
+  // Achievements have no logo (a trophy is shown) and may omit points/link
+  {
+    id: 9,
+    type: "Achievements",
+    role: "1st Place, GenAI Exchange Hackathon",
+    org: "Google",
+    time: "Oct 2024",
+    points: [
+      <>
+        Won with <b>Seekho</b>, outshining <b>3300+</b> teams.
+      </>,
+    ],
+    link: "https://github.com/shivamk-21/Seekho",
+    linkLabel: "Seekho",
+  },
+  {
+    id: 10,
+    type: "Achievements",
+    role: "Ranked 25th, Amazon ML Challenge 2024",
+    org: "Amazon",
+    time: "Sep 2024",
+    points: [
+      <>
+        Ranked <b>25th</b>, competing among the top teams.
+      </>,
+    ],
+  },
+  {
+    id: 11,
+    type: "Achievements",
+    role: "Ranked 9th, Hackfest 2023",
+    org: "IIT (ISM) Dhanbad",
+    time: "Apr 2023",
+    points: [
+      <>
+        Placed <b>9th</b> among <b>80</b> teams.
+      </>,
+    ],
+  },
+  {
+    id: 12,
+    type: "Achievements",
+    role: "Best Project in Track, Codeutsava 6.0",
+    org: "NIT Raipur",
+    time: "Feb 2023",
   },
   // {
   //   id: 4,

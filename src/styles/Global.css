@@ -1,4 +1,11 @@
 /* Global */
+:root {
+  --ink: #16163a;
+  --muted: #4b4b6b;
+  --accent: #3730a3;
+  --accent-soft: #e6e4fb;
+  --body-font: "Nunito", system-ui, sans-serif;
+}
 .App {
   height: 100%;
 }
@@ -39,35 +46,126 @@
   padding: 0.1vw 0.7vw 0.2vw 0.7vw;
 }
 
+/* Scroll reveal: App.js adds .in when the element enters the viewport */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Shared section pieces (Projects, Experience) */
+/* Transparent at the top: the illustrated section above overflows into this area */
+.tinted {
+  background: linear-gradient(transparent 14vh, #eef0fb 32vh, #e9e6f8);
+}
+.section-title {
+  margin: 0 0 clamp(1rem, 3vw, 2.5rem);
+  font-family: "Itim";
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: var(--ink);
+  text-align: center;
+}
+.badge {
+  align-self: flex-start;
+  padding: 0.25rem 0.75rem;
+  border-radius: 99rem;
+  background: var(--accent);
+  color: #fff;
+  font: 700 0.8rem var(--body-font);
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tags > li {
+  padding: 0.2rem 0.65rem;
+  border-radius: 99rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font: 600 0.8rem var(--body-font);
+}
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border-radius: 99rem;
+  background: var(--ink);
+  color: #fff;
+  font: 700 0.9rem var(--body-font);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btn:hover,
+.btn:focus-visible {
+  background: var(--accent);
+}
+
 /* Footer */
 .Footer {
-  width: 100%;
-  background-color: black;
-  height: 6.4%;
-  align-items: center;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem max(5vw, (100% - 72rem) / 2);
+  background: #070b24;
+  color: #fff;
+  font-family: var(--body-font);
 }
-.contact {
-  position: absolute;
-  width: 50%;
-  font-size: 2vw;
+.footer-copy {
   font-family: "Itim";
-  color: #ffffff;
-  padding-left: 1%;
-  cursor: pointer;
+  white-space: nowrap;
+}
+.footer-links {
+  display: flex;
+  gap: 0.5rem;
+}
+.footer-links > a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 99rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
   text-decoration: none;
+  transition: background 0.2s;
+}
+.footer-links > a:hover,
+.footer-links > a:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+}
+.footer-links img {
+  height: 1.1rem;
+}
+/* The GitHub mark is dark and transparent; whiten it for the dark footer */
+.footer-links img.mono {
+  filter: brightness(0) invert(1);
 }
 .click {
-  position: absolute;
-  height: 1%;
-  align-items: center;
-  display: flex;
-  font-size: 1.5vw;
-  font-family: "Bruno Ace";
-  color: #ffffff;
-  right: 1vw;
-  padding: 1%;
-  cursor: none;
+  padding: 0.45rem 1rem;
+  border: 0;
+  white-space: nowrap;
+  border-radius: 99rem;
+  background: var(--accent);
+  color: #fff;
+  font: 0.85rem "Bruno Ace", var(--body-font);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.click:hover,
+.click:focus-visible {
+  background: #4f46e5;
 }
 @media only screen and (max-width: 767px),
   only screen and (orientation: portrait) {
@@ -76,8 +174,18 @@
     display: none;
   }
 
-  /* Footer */
-  .Footer {
+  /* Footer: icon-only links and arrow-only button to stay on one line */
+  .footer-copy {
+    font-size: 0.9rem;
+  }
+  .footer-links > a {
+    padding: 0.45rem;
+  }
+  .footer-links span,
+  .click > span {
     display: none;
+  }
+  .click {
+    padding: 0.45rem 0.8rem;
   }
 }

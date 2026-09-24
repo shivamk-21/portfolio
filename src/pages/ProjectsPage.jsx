@@ -2,40 +2,48 @@ import React from "react";
 import { projectDetails } from "../data/projects";
 import "../styles/ProjectsPage.css";
 
-const ProjectsPage = () => {
-  const createCard = (project, designType) => (
-    <div className={`project-card ${designType}`} key={project.id}>
-      <img src={project.image} alt={project.title} />
+const ProjectCard = ({ project, featured }) => (
+  <article className={`project-card reveal${featured ? " featured" : ""}`}>
+    <div className="media">
+      <img src={project.image} alt="" />
+    </div>
+    <div className="body">
+      {project.badge && <span className="badge">{project.badge}</span>}
       <h3>{project.title}</h3>
       <p>{project.description}</p>
-      <a href={project.link} target="_blank" rel="noopener noreferrer">
-        Learn More
-      </a>
+      <ul className="tags">
+        {project.tags.map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
+      </ul>
+      {project.link && (
+        <a
+          className="btn"
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {project.linkLabel}
+        </a>
+      )}
     </div>
-  );
+  </article>
+);
 
-  // Group the cards in sets of two and alternate designs
-  const cardGroups = [];
-  for (let i = 0; i < projectDetails.length; i += 2) {
-    const group = [];
-    group.push(createCard(projectDetails[i], i % 2 === 0 ? "" : "design2"));
-    if (i + 1 < projectDetails.length) {
-      group.push(
-        createCard(projectDetails[i + 1], (i + 1) % 2 === 0 ? "" : "design2")
-      );
-    }
-    cardGroups.push(group);
-  }
-
-  return (
-    <div className="projects">
-      {cardGroups.map((group, index) => (
-        <div className="card-group" key={index}>
-          {group}
-        </div>
+const ProjectsPage = () => (
+  <div className="projects tinted">
+    <h2 className="section-title">Projects</h2>
+    <div className="featured-list">
+      {projectDetails.slice(0, 2).map((project) => (
+        <ProjectCard key={project.id} project={project} featured />
       ))}
     </div>
-  );
-};
+    <div className="project-grid">
+      {projectDetails.slice(2).map((project) => (
+        <ProjectCard key={project.id} project={project} />
+      ))}
+    </div>
+  </div>
+);
 
 export default ProjectsPage;

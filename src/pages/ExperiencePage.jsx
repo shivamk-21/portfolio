@@ -1,41 +1,56 @@
 import React from "react";
 import { exp } from "../data/experience";
 import "../styles/ExperiencePage.css";
-import "../styles/ProjectsPage.css";
 
-const ExperiencePage = () => {
-  const createCard = (project, designType) => (
-    <div className={`project-card ${designType}`} key={project.id}>
-      <img src={project.image} alt={project.title} />
-      <h3>{project.title}</h3>
-      <div className="time">{project.time}</div>
-      <p>{project.description}</p>
-      <a href={project.link} target="_blank" rel="noopener noreferrer">
-        Learn More
-      </a>
-    </div>
-  );
+const groups = ["Work", "Leadership", "Achievements"];
 
-  // Group the cards in sets of two and alternate designs
-  const cardGroups = [];
-  for (let i = 0; i < exp.length; i += 2) {
-    const group = [];
-    group.push(createCard(exp[i], i % 2 === 0 ? "" : "design2"));
-    if (i + 1 < exp.length) {
-      group.push(createCard(exp[i + 1], (i + 1) % 2 === 0 ? "" : "design2"));
-    }
-    cardGroups.push(group);
-  }
-
-  return (
-    <div className="experience">
-      {cardGroups.map((group, index) => (
-        <div className="card-group" key={index}>
-          {group}
-        </div>
-      ))}
-    </div>
-  );
-};
+const ExperiencePage = () => (
+  <div className="experience tinted">
+    <h2 className="section-title">Experience</h2>
+    {groups.map((group) => (
+      <section
+        className={`timeline-group group-${group.toLowerCase()}`}
+        key={group}
+      >
+        <h3 className="group-label">{group}</h3>
+        <ol className="timeline">
+          {exp
+            .filter((item) => item.type === group)
+            .map((item) => (
+              <li className="timeline-item reveal" key={item.id}>
+                {item.image ? (
+                  <img className="node" src={item.image} alt="" />
+                ) : (
+                  <span className="node" aria-hidden="true">
+                    🏆
+                  </span>
+                )}
+                <span className="time">{item.time}</span>
+                <h4>{item.role}</h4>
+                <div className="org">{item.org}</div>
+                {item.points && (
+                  <ul>
+                    {item.points.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                )}
+                {item.link && (
+                  <a
+                    className="btn"
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.linkLabel}
+                  </a>
+                )}
+              </li>
+            ))}
+        </ol>
+      </section>
+    ))}
+  </div>
+);
 
 export default ExperiencePage;

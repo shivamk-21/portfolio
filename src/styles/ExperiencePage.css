@@ -1,34 +1,122 @@
-/* experience Page */
+/* Experience Page */
+/* Top padding clears the education illustration, which overflows 14vh into this section */
+/* Work and Leadership sit side by side when there is room; Achievements spans below */
 .experience {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+  align-items: start;
+  gap: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3vw, 3rem);
+  padding: calc(14vh + 1.5rem) max(5vw, (100% - 76rem) / 2) calc(3vw + 4rem);
+}
+.experience > .section-title,
+.group-achievements {
+  grid-column: 1 / -1;
+}
+.experience > .section-title {
+  margin-bottom: 0;
+}
+.group-label {
+  margin: 0 0 1.25rem;
+  font: 800 0.85rem var(--body-font);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Vertical rail with a logo node per entry */
+.timeline {
+  --node: 4rem;
+  --gutter: 3rem;
+  margin: 0 0 0 calc(var(--node) / 2);
+  padding: 0 0 0 var(--gutter);
+  border-left: 3px solid #d6d3f5;
+  list-style: none;
+}
+.timeline-item {
   position: relative;
-  width: 100%;
-  height: auto;
-  padding-top: 7vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 6vw;
+  padding: 1.25rem 1.5rem;
+  border-radius: 1.25rem;
+  background: #fff;
+  box-shadow: 0 0.75rem 2.5rem rgba(22, 22, 58, 0.1);
 }
-.project-card > .time {
-  font-size: 1.5vw;
-  font-family: "Itim";
+.timeline-item + .timeline-item {
+  margin-top: 1.5rem;
+}
+.timeline-item > .node {
   position: absolute;
-  left: 2.5%;
-  top: 2.5%;
+  top: 1.25rem;
+  left: calc(-1 * var(--gutter) - 1.5px - var(--node) / 2);
+  width: var(--node);
+  height: var(--node);
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  object-fit: contain;
 }
-.design2 > .time {
-  left: auto;
-  right: 2.5%;
+.timeline-item > span.node {
+  display: grid;
+  place-items: center;
+  font-size: calc(var(--node) * 0.42);
+}
+.timeline-item > .time {
+  font: 700 0.85rem var(--body-font);
+  color: var(--accent);
+}
+.timeline-item > h4 {
+  margin: 0.25rem 0 0;
+  font-family: "Itim";
+  font-size: clamp(1.3rem, 2vw, 1.75rem);
+  color: var(--ink);
+}
+.timeline-item > .org {
+  font: 600 1rem var(--body-font);
+  color: var(--muted);
+}
+.timeline-item > ul {
+  margin: 0.75rem 0 1rem;
+  padding-left: 1.2rem;
+  font-family: var(--body-font);
+  font-size: clamp(0.95rem, 1.05vw, 1.05rem);
+  line-height: 1.6;
+  color: var(--muted);
+}
+.timeline-item b {
+  color: var(--ink);
+}
+
+/* Achievements: 2x2 card grid, trophy inside the card instead of on a rail */
+.group-achievements .timeline {
+  --node: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.group-achievements .timeline-item + .timeline-item {
+  margin-top: 0;
+}
+.group-achievements .timeline-item {
+  padding-left: calc(var(--node) + 2.5rem);
+}
+.group-achievements .timeline-item > .node {
+  left: 1.25rem;
 }
 
 @media only screen and (max-width: 767px),
   only screen and (orientation: portrait) {
   /* Experience Page  */
-  .project-card > .time,
-  .design2 > .time {
-    font-size: 4vw;
-    top: 19.8vh;
-    width: 100%;
-    left: 2%;
+  .experience {
+    padding: 2.5rem 5vw calc(3vw + 3rem);
+  }
+  .timeline {
+    --node: 3rem;
+    --gutter: 2rem;
+  }
+  .timeline-item {
+    padding: 1rem 1.1rem;
   }
 }

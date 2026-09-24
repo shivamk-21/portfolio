@@ -10,11 +10,11 @@ const HomePage = () => {
         <div className="firstname">Shivam</div>
         <div className="secondname">Kushwaha</div>
         <div className="box">
-          <h2>Developer | Data Analyst | Designer </h2>
+          <h2>AI/ML Engineer | Developer | Designer </h2>
           <p>
-            Final Year Student at IIIT, Naya Raipur with keen interest in
-            Development, Data Science and Designing. Thus, work closely with
-            these field to make innovative and intuitive design products
+            M.Tech student at IIT Bhilai with keen interest in AI, Full-Stack
+            Development and Design. Thus, work closely with these fields to make
+            innovative and intuitive products
           </p>
         </div>
       </div>

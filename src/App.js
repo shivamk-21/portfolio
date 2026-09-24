@@ -36,12 +36,9 @@ function App() {
 
     if (currentPage === "home") {
       setNavBackColours("rgba(0,0,0,0)");
-    } else if (currentPage === "projects" || currentPage === "edu") {
+    } else if (["projects", "edu", "exp"].includes(currentPage)) {
       setNavBackColours("rgba(2, 21, 52, 1)");
-    } else if (currentPage === "exp") {
-      setNavBackColours("rgba(56, 56, 56, 1)");
-    }
-    else {
+    } else {
       setNavBackColours("rgba(72, 72, 85, 1)");
     }
     setCurrentPage(currentPage);
@@ -53,6 +50,22 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  // Mark .reveal elements as they scroll into view; the animation is in Global.css
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        }),
+      { rootMargin: "0px 0px -10% 0px" }
+    );
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    return () => io.disconnect();
   }, []);
 
   return (

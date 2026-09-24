@@ -11,18 +11,62 @@
   background-repeat: no-repeat;
   clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%);
 }
-.education > p {
-  font-size: 3vw;
+.degrees {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 60vh;
+  padding: 0 5vw;
+}
+/* Frosted glass keeps text legible over any part of the illustration */
+.degree {
+  position: relative;
+  width: min(22rem, 40vw);
+  box-sizing: border-box;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 1.25rem;
+  background: rgba(10, 14, 45, 0.45);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-family: var(--body-font);
+}
+.degree + .degree::before {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  left: -1.5rem;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+}
+.degree > .years {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+.degree > h3 {
+  margin: 0.2rem 0;
   font-family: "Itim";
-  text-align: center;
-  width: 45%;
-  height: 20%;
-  margin-top: 75.5vh;
-  margin-left: 28vw;
-  color: white;
-  text-shadow: 0px 0px 2vw rgba(255, 255, 255, 1),
-    0px 0px 4vw rgba(255, 255, 255, 0.8), 0px 0px 6vw rgba(255, 255, 255, 0.6);
-  -webkit-text-stroke: 0.1vw black; /* Strong black stroke for contrast */
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+}
+.degree > p {
+  margin: 0;
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+  opacity: 0.9;
+}
+.degree > .cgpa {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+.degree > .cgpa > b {
+  margin-right: 0.3rem;
+  font-family: "Itim";
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-weight: normal;
 }
 
 @media only screen and (max-width: 767px),
@@ -33,10 +77,21 @@
     clip-path: polygon(0% 2%, 100% 5%, 100% 95%, 0% 98%);
     background-position: 36% 0%;
   }
-  .education > p {
-    font-size: 8vw;
-    margin-top: 65vh;
-    margin-left: 10vw;
-    width: 80%;
+  /* Anchored to the bottom so short screens don't push the cards past the illustration */
+  .degrees {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    bottom: 9vh;
+    left: 0;
+    margin-top: 0;
+  }
+  .degree {
+    width: min(22rem, 85vw);
+  }
+  .degree + .degree::before {
+    content: "↓";
+    top: -1.5rem;
+    left: 50%;
   }
 }
