@@ -22,7 +22,7 @@ export const projectDetails = [
     description:
       "An Automatic Speech Recognition system for Indian accents built with Multi-task Meta Learning, trained on speech data from 10+ regions. Analysing 108 hours of accented audio yielded a 3-5% reduction in Word Error Rate over joint multi-accent training.",
     tags: ["Speech Recognition", "Meta Learning", "NLP"],
-    link: "https://dl.acm.org/journal/tallip",
+    link: "https://dl.acm.org/doi/full/10.1145/3748322",
     linkLabel: "Journal",
     image: acm,
   },
